@@ -23,6 +23,12 @@ unidades$bairro <-
 saveRDS(unidades,
         file = "coleta/dados/unidades.RDS")
 
+# ## unidades de saúde ####
+# print("Carga de dados do internos... unidades de saúde...")
+# unidades_saude <- readOGR(paste0("dados/",arquivo_unidades_saude))
+# saveRDS(unidades_saude,
+#         file = "coleta/dados/unidades_saude.RDS")
+
 ## georreferenciamento das unidades imobiliárias ####
 print("Carga de dados do internos... unidades imobiliárias...")
 imoveis_geo_interno <- readOGR(paste0("dados/",arquivo_imoveis))

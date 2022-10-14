@@ -55,24 +55,25 @@ function(input, output, session)  {
   })
   
   # Efeitos da seleção de um munícipe
-  observeEvent(input$consulta_cpf,{
+  observeEvent(input$consulta_pcode,{
+    pcode <- input$consulta_pcode
     # mostra tabela de informações pessoais
-    if(input$consulta_cpf != ""){
+    if(pcode != ""){
       mostrar_tabela(1)
     }
     
     # seleciona variáveis georreferenciadas
     imoveis <- imoveis_c_geo[
-      (imoveis_c_geo@data$pcode == input$consulta_cpf) |> which(),]
+      (imoveis_c_geo@data$pcode == pcode) |> which(),]
     educacao <- educacao_c_geo[
-      (educacao_c_geo@data$pcode == input$consulta_cpf) |> which(),]
+      (educacao_c_geo@data$pcode == pcode) |> which(),]
     saude <- saude_c_geo[
-      (saude_c_geo@data$pcode == input$consulta_cpf) |> which(),]
+      (saude_c_geo@data$pcode == pcode) |> which(),]
     assistencia <- assistencia_c_geo[
-      (assistencia_c_geo@data$pcode == input$consulta_cpf) |> which(),]
+      (assistencia_c_geo@data$pcode == pcode) |> which(),]
 
     # define novo bbox
-    if (input$consulta_cpf == "" | 
+    if (pcode == "" | 
         (imoveis@data[1,1] |> is.na() &
          educacao@data[1,1] |> is.na() &
          saude@data[1,1] |> is.na() &
@@ -152,34 +153,39 @@ function(input, output, session)  {
     # Seleciona informações não georreferenciadas
     # seleciona variáveis georreferenciadas
     imoveis <- imoveis_s_geo[
-      imoveis_s_geo$pcode == input$consulta_cpf,]
+      imoveis_s_geo$pcode == pcode,]
     educacao <- educacao_s_geo[
-      educacao_s_geo$pcode == input$consulta_cpf,]
+      educacao_s_geo$pcode == pcode,]
     saude <- saude_s_geo[
-      saude_s_geo$pcode == input$consulta_cpf,]
+      saude_s_geo$pcode == pcode,]
     assistencia <- assistencia_s_geo[
-      assistencia_s_geo$pcode == input$consulta_cpf,]
+      assistencia_s_geo$pcode == pcode,]
 
-    # Se houver informações, ativa a tabela de relações
-    if (input$consulta_cpf == "" |
+    if (pcode == "" |
         (imoveis[1,1] |> is.na() &
          educacao[1,1] |> is.na() &
          saude[1,1] |> is.na() &
          assistencia[1,1] |> is.na())) {
+      # Se não houver informações, esconde a tabela
       mostrar_tabela_relacoes(-1)
+      dados_relacoes(NULL)
     } else {
-      # mostrar_tabela_relacoes(1)
-      dados_relacoes(rbind(
+      # Se houver informações, ativa a tabela de relações
+      dados_relacoes <- rbind(
         educacao$unidadeReferencia,
         saude$UnidadeReferencia,
         assistencia$unidadeReferencia
-      ) |> as.data.frame())
-    
-      dados_relacoes(rbind(
-        educacao$unidadeReferencia,
-        saude$UnidadeReferencia,
-        assistencia$unidadeReferencia
-      ) |> as.data.frame())
+      ) |> as.data.frame()
+      if (imoveis[1,1] |> is.na() |> not()) {
+        lista_imoveis <- imoveis$inscricao |>
+          lapply(function(i) paste0("Imóvel: ",i)) |>
+          as.data.frame() |>
+          t()
+        dados_relacoes <-
+          rbind(dados_relacoes, lista_imoveis)
+      }
+      names(dados_relacoes) <- "Relações sem georreferenciamento"
+      dados_relacoes(dados_relacoes)
     }
       
   },  ignoreInit = FALSE)
@@ -187,18 +193,102 @@ function(input, output, session)  {
 
   # SelectsizeInput pelo lado do servidor por questão de performance
   updateSelectizeInput(
-    inputId =  'consulta_cpf',
-    choices = pessoas,
+    inputId =  'consulta_pcode',
+    choices = pessoas[,c("pcode","cpf","nome")],
     server = TRUE
   )
 
-  # Tabela de relações não georreferenciadas ####
+  ### Tabela de relações não georreferenciadas ####
   # sistema para abrir e fechar tabela de dados
   mostrar_tabela_relacoes <- reactiveVal(-1)
   output$mostrar_tabela_relacoes <- reactive(mostrar_tabela_relacoes())
   outputOptions(output,"mostrar_tabela_relacoes", suspendWhenHidden = FALSE)
-  observeEvent(input$fechar_tabela_relacoes,mostrar_tabela_relacoes(-1))
+  observeEvent(input$fechar_tabela_relacoes, mostrar_tabela_relacoes(-1))
+  observeEvent(dados_relacoes(), 
+               if (dados_relacoes() |> is.null() |> not())
+                 mostrar_tabela_relacoes(1))
+  
+  # dados
+  dados_relacoes <- reactiveVal(NULL)
 
+  # tabela de relações
+  output$tabela_relacoes <- renderDT({
+    dados_relacoes()
+  },
+  server = F,
+  rownames = FALSE,
+  selection = "none",
+  options = list(
+    ordering = FALSE,
+    searching = FALSE,
+    paging = FALSE,
+    info = FALSE,
+    lengthChange = FALSE)
+  )
+  
+  # clique na tabela de relações
+  observeEvent(input$tabela_relacoes_cell_clicked, {
+    info = input$tabela_relacoes_cell_clicked
+    if (info$value |> is.null() |> not()) {
+      if (grep("Imóvel: ",info$value) != 0) {
+        # Se clicou em um imóvel, apresenta a tabela de informações do imóvel
+        dados_imovel(sub("Imóvel: ","", info$value))
+        dados_imovel(sub("Imóvel: ","", info$value))
+        mostrar_tabela_imovel(1)
+      }
+    }
+  })
+  ## Fim tabela de relações
+  
+  
+  ### Tabela de informações do imóvel ####
+  # sistema para abrir e fechar tabela de dados
+  mostrar_tabela_imovel <- reactiveVal(-1)
+  output$mostrar_tabela_imovel <- reactive(mostrar_tabela_imovel())
+  outputOptions(output,"mostrar_tabela_imovel", suspendWhenHidden = FALSE)
+  observeEvent(input$fechar_tabela_imovel, mostrar_tabela_imovel(-1))
+  observeEvent(dados_imovel(), 
+               if (dados_imovel() |> is.null() |> not())
+                 mostrar_tabela_imovel(1))
+  
+  # dados
+  dados_imovel <- reactiveVal(NULL)
+  
+  # tabela do imóvel
+  output$tabela_imovel <- renderText({
+    # dados_imovel()
+    paste("Outro teste: ",dados_imovel())
+  }
+  # },
+  # 
+  # server = F,
+  # rownames = FALSE,
+  # selection = "none",
+  # options = list(
+  #   ordering = FALSE,
+  #   searching = FALSE,
+  #   paging = FALSE,
+  #   info = FALSE,
+  #   lengthChange = FALSE)
+  )
+  ## Fim tabela do imóvel
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   # Tabela ####
   # sistema para abrir e fechar tabela de dados
   mostrar_tabela <- reactiveVal(-1)
@@ -207,16 +297,7 @@ function(input, output, session)  {
   observeEvent(input$fechar_tabela,mostrar_tabela(-1))
   observeEvent(input$btn_tabela,mostrar_tabela(mostrar_tabela()*-1))
   
-  dados_relacoes <- reactiveVal(NULL)
     
-  # output$tabelaSaude <- renderUI(
-  #   dados_relacoes()
-  # )
-
-  output$tabelaInformacoes <- renderDataTable({
-    dados_relacoes()
-  })
-  
   # Variável para exibir painel "carregando..."
   output$carregando <- renderText("")
   outputOptions(output, 'carregando', suspendWhenHidden=FALSE)
