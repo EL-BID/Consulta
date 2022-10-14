@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+dados/
+coleta/dados/
+visualizacao/dados/
+manipulacao/dados/
