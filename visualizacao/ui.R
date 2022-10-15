@@ -37,40 +37,110 @@ navbarPage(
     tags$style(type = "text/css", ".navbar {margin-bottom: 0px;}"),
     tags$style(type = "text/css", ".container-fluid .navbar-header .navbar-brand {margin-left: 0px;}"),
 
-    # Painel de controle
-    absolutePanel(
-      id = "inputs_panel",
-      top = 46,
-      left = 10,
-      width = 400,
-      style = "z-index: 5000;
+    # Painel de consulta
+    conditionalPanel(
+      "input.consulta_pcode == ''",
+      absolutePanel(
+        id = "inputs_panel",
+        top = 46,
+        left = 10,
+        width = 400,
+        style = "z-index: 5000;
       font-size: 14px;
       padding: 15px 10px 0px 10px;
       background-color: rgba(0,0,0,0.1);",
-      selectizeInput(
-        "consulta_pcode",
-        label = NULL,
-        width = 400,
-        choices = NULL,
-        selected = NULL,
-        options = list(
-          placeholder = "buscar...",
-          onInitialize = I('function() { this.setValue(""); }'),
-          searchConjunction = 'and',
-          searchField = c('cpf', 'nome'),
-          labelField= 'nome',
-          sortField = 'nome',
-          valueField = "pcode",
-          render = I("{option: function(item, escape) {
-            return '<div style = \"white-space: nowrap; overflow: hidden;\">' + escape(item.cpf) + ' | ' + escape(item.nome) +'</div>';
-          }}")
+        selectizeInput(
+          "consulta_pcode",
+          label = NULL,
+          width = 400,
+          choices = NULL,
         )
+      )
+    ),
+    # Painel de nome e cpf
+    conditionalPanel(
+      "input.consulta_pcode != ''",
+      absolutePanel(
+        id = "inputs_panel",
+        top = 46,
+        left = 10,
+        width = 400,
+        height = 68,
+        style = "z-index: 5000;
+      font-size: 14px;
+      color: black;
+      padding: 13px 10px 0px 10px;
+      background-color: rgba(0,0,0,0.1);",
+        "Nome: ",
+        textOutput("nome", inline = TRUE) |> tags$b(),
+        tags$p("CPF: ",
+               textOutput("cpf", inline = TRUE) |> tags$b()),
+        actionLink(
+          "fechar_nome_cpf",
+          label = NULL,
+          style = "vertical-align: text-top;font-size: 14px;color: black;",
+          icon = icon("times", verify_fa = FALSE)
+        ) |> absolutePanel(top = 0, right = 5)
       )
     ),
     
     # Mapa
     leafletOutput("map", width = "100%", height = "calc(100vh - 41px)"),
 
+    # Tabela de informações pessoas
+    conditionalPanel(
+      "output.mostrar_tabela_infos != -1",
+      absolutePanel(
+        width = 730,
+        # height = 200,
+        top = 46,
+        left = 420,
+        draggable = TRUE,
+        style = "
+          z-index: 4000;
+          background-color: #fff;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+          border: 2px solid rgba(0,0,0,0.2);
+        ",
+        DTOutput("tabela_infos"),
+        actionLink(
+          "fechar_tabela_infos",
+          label = NULL,
+          style = "
+                    vertical-align: text-top;
+                    font-size: 14px;
+                    color: black;
+                  ",
+          icon = icon("times", verify_fa = FALSE)
+        ) |> absolutePanel(top = 0, right = 5)
+      )
+    ),
+    
+    conditionalPanel(
+      "output.mostrar_tabela_infos == 1",
+      absolutePanel(
+        top = 51,
+        style = btn_pressionado
+      )
+    ),
+    absolutePanel(
+      top = 51,
+      style = btn_normal
+    ),
+    absolutePanel(
+      top = 51,
+      style = btn_rotulo,
+      actionLink(
+        "btn_tabela_infos",
+        label = NULL,
+        icon("id-card-o")
+      )
+    ),
+    
+    
     # Tabela de relações sem georreferenciamento
     conditionalPanel(
       "output.mostrar_tabela_relacoes != -1",
@@ -108,7 +178,7 @@ navbarPage(
     conditionalPanel(
       "output.mostrar_tabela_imovel != -1",
       absolutePanel(
-        width = 280,
+        width = 400,
         # height = 200,
         top = 125,
         left = 300,
@@ -122,8 +192,18 @@ navbarPage(
           border-top-right-radius: 4px;
           border: 2px solid rgba(0,0,0,0.2);
         ",
-        "TESTE",
-        textOutput("tabela_imovel"),
+        tags$p(
+          style = "
+              font-size: 14px;
+              font-weight: bold;
+              text-align: center;
+              padding: 5px;
+              margin: 0px; !important;
+              color: black;",
+          "Informações do imóvel"),
+        tags$hr(style = "margin-top: 0;margin-bottom: 0;"
+        ),
+        uiOutput("tabela_imovel"),
         actionLink(
           "fechar_tabela_imovel",
           label = NULL,
@@ -136,31 +216,6 @@ navbarPage(
         ) |> absolutePanel(top = 0, right = 5)
       )
     ),
-    
-    
-    
-    # conditionalPanel(
-    #   "output.mostrar_tabela == 1",
-    #   absolutePanel(
-    #     top = 425,
-    #     style = btn_pressionado
-    #   )
-    # ),
-    # absolutePanel(
-    #   top = 425,
-    #   style = btn_normal
-    # ),
-    # absolutePanel(
-    #   top = 425,
-    #   style = btn_rotulo,
-    #   actionLink(
-    #     "btn_tabela",
-    #     label = NULL,
-    #     icon("id-card-o")
-    #   )
-    # )
-    
-    
 
   ),
 

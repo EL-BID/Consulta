@@ -5,11 +5,11 @@ print("Carga de dados do internos...")
 library(rgdal)
 source("config.R")
 
-# ## lotes ####
-# print("Carga de dados do internos... lotes...")
-# lotes <- readOGR(paste0("dados/",arquivo_lotes))
-# saveRDS(lotes,
-#         file = "coleta/dados/lotes.RDS")
+## lotes ####
+print("Carga de dados do internos... lotes...")
+lotes <- readOGR(paste0("dados/",arquivo_lotes))
+saveRDS(lotes,
+        file = "coleta/dados/lotes.RDS")
 
 ## unidades ####
 print("Carga de dados do internos... unidades de atendimento...")

@@ -5,6 +5,7 @@ dsn_name <- "PMVBigData"
 dw_encoding <- "UTF-8"
 
 # Arquivos presentes em /dados:
+arquivo_lotes <- "lotes.kml"
 arquivo_imoveis <- "imoveis.kml"
 arquivo_unidades <- "unidades.kml"
 arquivo_unidades_saude <- "unidades_saude.kml"

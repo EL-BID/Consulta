@@ -17,6 +17,8 @@ packages <- c(
   "leaflet",
   "RColorBrewer",
   "magrittr",
+  "splitstackshape",
+  "tidyr",
   "sp",
   "rgeos",
   "DT",
