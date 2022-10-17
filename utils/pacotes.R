@@ -18,6 +18,7 @@ packages <- c(
   "RColorBrewer",
   "magrittr",
   "splitstackshape",
+  'xlsx',
   "tidyr",
   "sp",
   "rgeos",

@@ -9,18 +9,16 @@ library(tidyr)
 source("manipulacao/library.R")
 source("config.R")
 
-pessoas_imobiliario <-
-        readRDS("coleta/dados/pessoas_imobiliario.RDS")
-pessoas_educacao <-
-        readRDS("coleta/dados/pessoas_educacao.RDS")
-pessoas_assistencia <-
-        readRDS("coleta/dados/pessoas_assistencia.RDS")
-pessoas_saude <-
-        readRDS("coleta/dados/pessoas_saude.RDS")
-pessoas_fisica <-
-        readRDS("coleta/dados/pessoas_fisica.RDS")
-pessoas_vinculo <-
-        readRDS("coleta/dados/pessoas_vinculo.RDS")
+print("Agrupa dados das pessoas... Carregando informações...")
+
+pessoas_imobiliario <- readRDS("coleta/dados/pessoas_imobiliario.RDS")
+pessoas_educacao <- readRDS("coleta/dados/pessoas_educacao.RDS")
+pessoas_assistencia <- readRDS("coleta/dados/pessoas_assistencia.RDS")
+pessoas_saude <- readRDS("coleta/dados/pessoas_saude.RDS")
+pessoas_fisica <- readRDS("coleta/dados/pessoas_fisica.RDS")
+pessoas_vinculo <- readRDS("coleta/dados/pessoas_vinculo.RDS")
+
+print("Agrupa dados das pessoas... Criando arquivo de pessoas...")
 
 # Cria códigos próprios para cada lançamento na tabela
 pessoas_assistencia$acode <- 1:length(pessoas_assistencia$cpf)
@@ -117,6 +115,8 @@ pessoas_educacao$pcode <-
 # Ordena as pessoas pelos nomes
 pessoas <- pessoas[order(pessoas$nome),]
 
+print("Agrupa dados das pessoas... Salvando informações de pessoas...")
+
 saveRDS(pessoas,
         file = "manipulacao/dados/pessoas.RDS")
 saveRDS(pessoas_saude,
@@ -139,10 +139,16 @@ pessoas_assistencia$dataAtualizacao[pessoas_assistencia$dataAtualizacao |> is.na
   pessoas_assistencia$dataInclusao[pessoas_assistencia$dataAtualizacao |> is.na()]
 
 # Padroniza o formato das datas
-pessoas_fisica$dataAtualizacao <- pessoas_fisica$dataAtualizacao |> as.Date("%d/%m/%Y")
-pessoas_educacao$dataAtualizacao <- pessoas_educacao$dataAtualizacao |> as.Date("%d/%m/%Y")
-pessoas_saude$dataAtualizacao <- pessoas_saude$dataAtualizacao |> as.Date("%d/%m/%Y")
-pessoas_assistencia$dataAtualizacao <- pessoas_assistencia$dataAtualizacao |> as.Date("%d/%m/%Y")
+pessoas_fisica$dataAtualizacao <- pessoas_fisica$dataAtualizacao |> 
+  as.Date("%d/%m/%Y") |> format("%d/%m/%Y")
+pessoas_educacao$dataAtualizacao <- pessoas_educacao$dataAtualizacao |> 
+  as.Date("%d/%m/%Y") |> format("%d/%m/%Y")
+pessoas_saude$dataAtualizacao <- pessoas_saude$dataAtualizacao |>
+  as.Date("%d/%m/%Y") |> format("%d/%m/%Y")
+pessoas_assistencia$dataAtualizacao <- pessoas_assistencia$dataAtualizacao |> 
+  as.Date("%d/%m/%Y") |> format("%d/%m/%Y")
+
+print("Agrupa dados das pessoas... Coletando nomes...")
 
 # nomes
 nome <- NULL
@@ -155,6 +161,8 @@ nome$campo <- "Nome"
 pcodes_duplicados <- nome$pcode[nome$pcode |> duplicated()] |> unique()
 nome <- nome[nome$pcode %in% pcodes_duplicados,]
 
+print("Agrupa dados das pessoas... Coletando e-mails...")
+
 # e-mails
 email <- NULL
 email <- email |> junta_email(pessoas_fisica, "dt_fisica", "Email")
@@ -163,6 +171,8 @@ email <- email |> junta_email(pessoas_saude, "dt_saude")
 email <- email |> junta_email(pessoas_assistencia, "dt_assistencia")
 email$campo <- "E-mail"
 
+print("Agrupa dados das pessoas... Coletando telefones...")
+
 # telefones
 telefone <- NULL
 telefone <- telefone |> junta_telefone(pessoas_fisica, "dt_fisica", "Telefone")
@@ -170,6 +180,8 @@ telefone <- telefone |> junta_telefone(pessoas_educacao, "dt_educacao")
 telefone <- telefone |> junta_telefone(pessoas_saude, "dt_saude")
 telefone <- telefone |> junta_telefone(pessoas_assistencia, "dt_assistencia")
 telefone$campo <- "Telefone"
+
+print("Agrupa dados das pessoas... Coletando filiação...")
 
 # maes
 mae <- NULL
@@ -180,13 +192,17 @@ mae <- mae[,c(1,2,4,5,3)]
 mae <- mae |> junta_mae(pessoas_assistencia,"dt_assistencia")
 mae$campo <- "Mãe"
 
+print("Agrupa dados das pessoas... Coletando data de nascimento...")
+
 # nascimento
 nascimento <- NULL
 nascimento <- nascimento |> junta_nascimento(pessoas_fisica, "dt_fisica")
 nascimento$dt_educacao <- NA
 nascimento <- nascimento |> junta_nascimento(pessoas_saude, "dt_saude")
 nascimento <- nascimento |> junta_nascimento(pessoas_assistencia, "dt_assistencia")
-nascimento$campo <- "Data de nascimento"
+nascimento$campo <- "Nascimento"
+
+print("Agrupa dados das pessoas... Coletando identidade...")
 
 # identidade
 identidade <- NULL
@@ -195,6 +211,8 @@ identidade <- identidade |> junta_identidade(pessoas_educacao, "dt_educacao")
 identidade <- identidade |> junta_identidade(pessoas_saude, "dt_saude")
 identidade <- identidade |> junta_identidade(pessoas_assistencia, "dt_assistencia")
 identidade$campo <- "Identidade"
+
+print("Agrupa dados das pessoas... Coletando ctps...")
 
 # ctps
 ctps <- pessoas_assistencia[pessoas_assistencia$pcode |> is.na() |> not() &
@@ -208,12 +226,14 @@ ctps$dt_saude <- NA
 ctps <- ctps[,c(1,2,4,5,6,3)]
 ctps$campo <- "CTPS"
 
+print("Agrupa dados das pessoas... Coletando endereços...")
+
 # Endereços
 endereco <- NULL
 
 pessoas_fisica$LOGRADOURO <- pessoas_fisica$logradouro |> limpa_nome_rua()
 pessoas_fisica$endereco <- paste0(pessoas_fisica$tipoLogradouro, " ",
-                                  pessoas_fisica$LOGRADOURO,", n ",
+                                  pessoas_fisica$LOGRADOURO,", N ",
                                   pessoas_fisica$numero," ",
                                   pessoas_fisica$complemento,", ",
                                   pessoas_fisica$bairro,", ",
@@ -224,7 +244,7 @@ pessoas_fisica$endereco[pessoas_fisica$LOGRADOURO |> is.na()] <- NA
 endereco <- endereco |> junta_endereco(pessoas_fisica, "dt_fisica")
 
 pessoas_educacao$LOGRADOURO <- pessoas_educacao$logradouro |> limpa_nome_rua()
-pessoas_educacao$endereco <- paste0(pessoas_educacao$LOGRADOURO,", n ",
+pessoas_educacao$endereco <- paste0(pessoas_educacao$LOGRADOURO,", N ",
                                     pessoas_educacao$numero," ",
                                     pessoas_educacao$complemento,", ",
                                     pessoas_educacao$bairro,", ",
@@ -236,7 +256,7 @@ endereco <- endereco |> junta_endereco(pessoas_educacao, "dt_educacao")
 
 pessoas_saude$LOGRADOURO <- pessoas_saude$Logradouro |> limpa_nome_rua()
 pessoas_saude$endereco <- paste0(pessoas_saude$tipoLogradouro, " ",
-                                  pessoas_saude$LOGRADOURO,", n ",
+                                  pessoas_saude$LOGRADOURO,", N ",
                                   pessoas_saude$numero," ",
                                   pessoas_saude$complemento,", ",
                                   pessoas_saude$bairro,", ",
@@ -247,7 +267,7 @@ pessoas_saude$endereco[pessoas_saude$LOGRADOURO |> is.na()] <- NA
 endereco <- endereco |> junta_endereco(pessoas_saude, "dt_saude")
 
 pessoas_assistencia$LOGRADOURO <- pessoas_assistencia$logradouro |> limpa_nome_rua()
-pessoas_assistencia$endereco <- paste0(pessoas_assistencia$LOGRADOURO,", n ",
+pessoas_assistencia$endereco <- paste0(pessoas_assistencia$LOGRADOURO,", N ",
                                  pessoas_assistencia$numero," ",
                                  pessoas_assistencia$complemento,", ",
                                  pessoas_assistencia$bairro,", ",
@@ -257,6 +277,8 @@ pessoas_assistencia$endereco <- paste0(pessoas_assistencia$LOGRADOURO,", n ",
 pessoas_assistencia$endereco[pessoas_assistencia$LOGRADOURO |> is.na()] <- NA
 endereco <- endereco |> junta_endereco(pessoas_assistencia, "dt_assistencia")
 endereco$campo <- "Endereço"
+
+print("Agrupa dados das pessoas... Gravando...")
 
 info_pessoais <- rbind(
   nome,
@@ -271,6 +293,9 @@ info_pessoais <- rbind(
 
 saveRDS(info_pessoais,
         file = "manipulacao/dados/info_pessoais.RDS")
+
+print("Agrupa dados das pessoas... fim.")
+
 
 # Endereços!!
 # Precisa unificar entre as pessoas

@@ -287,7 +287,9 @@ junta_nascimento <- function(nascimento = NULL, base, nome_data, coluna = "dataN
   # elimina as pessoas não identificadas
   nascimento_temp <- nascimento_temp[nascimento_temp$pcode |> is.na() |> not(),]
   #formata
-  nascimento_temp[[coluna]] <- nascimento_temp[[coluna]] |> as.Date("%d/%m/%Y")
+  nascimento_temp[[coluna]] <- nascimento_temp[[coluna]] |> 
+    as.Date("%d/%m/%Y") |>
+    format("%d/%m/%Y")
   # junta tudo em um único data.frame
   names(nascimento_temp) <- c("pcode","valor",nome_data)
   if (nascimento |> is.null())

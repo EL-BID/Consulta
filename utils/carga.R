@@ -21,6 +21,5 @@ source("manipulacao/manipulacao.R")
 
 # Visualização: grava dados e reinicia a aplicação
 file.copy("manipulacao/dados", "visualizacao", recursive = TRUE)
-file.copy("coleta/dados/lotes.RDS", "visualizacao/dados", recursive = TRUE)
 file.create("visualizacao/restart.txt")
 print("Aplicação atualizada...")

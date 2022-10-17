@@ -7,16 +7,13 @@ library(DT)
 library(shinymanager)
 library(keyring)
 library(dplyr)
-
+library(xlsx)
+library(cachem)
+library(sp)
 
 # Carrega dados
 pessoas <- readRDS("dados/pessoas.RDS")
 info_pessoais <- readRDS("dados/info_pessoais.RDS")
-# pessoas_imobiliario <- readRDS("dados/pessoas_imobiliario.RDS")
-# pessoas_educacao <- readRDS("dados/pessoas_educacao.RDS")
-# pessoas_assistencia <- readRDS("dados/pessoas_assistencia.RDS")
-# pessoas_saude <- readRDS("dados/pessoas_saude.RDS")
-# pessoas_fisica <- readRDS("dados/pessoas_fisica.RDS")
 imoveis_c_geo <- readRDS("dados/imoveis_c_geo.RDS")
 educacao_c_geo <- readRDS("dados/educacao_c_geo.RDS")
 saude_c_geo <- readRDS("dados/saude_c_geo.RDS")
@@ -26,13 +23,18 @@ educacao_s_geo <- readRDS("dados/educacao_s_geo.RDS")
 saude_s_geo <- readRDS("dados/saude_s_geo.RDS")
 assistencia_s_geo <- readRDS("dados/assistencia_s_geo.RDS")
 lotes <- readRDS("dados/lotes.RDS")
+imoveis_p_lote <- readRDS("dados/imoveis_p_lote.RDS")
+lista_enderecos <- readRDS("dados/lista_enderecos.RDS")
 mybbox <- imoveis_c_geo@bbox
+
+
+shinyOptions(cache = cache_disk("dados/cache/")) 
 
 # definições de estilos:
 # botão de ferramenta
 btn_pressionado <- 
   "z-index:4000;
-  right: 10px;
+  right: 55px;
   width: 34px;
   height: 34px;
   background-color: #C3C3C3;
@@ -44,7 +46,7 @@ btn_pressionado <-
 
 btn_normal <-
   "z-index:3000;
-  right: 10px;
+  right: 55px;
   width: 34px;
   height: 34px;
   background-color: #fff;
@@ -63,12 +65,41 @@ btn_rotulo <-
   text-align: center;
   background-color: transparent;"
 
-plotar_relacoes <- function(relacao, cor, label, id = NULL, mapa, pcode) {
+info_cabecalho <- withTags(table(
+  class = 'compact',
+  thead(
+    border = 1,
+    tr(
+      th(
+        rowspan = 2,
+        colspan = 2,
+        style = "
+          vertical-align: middle;
+          text-align: center;
+          font-size: 18px;
+          ",
+        "Informações pessoais"),
+      th(
+        colspan = 4,
+        style = "text-align: center;",
+        'Data da última atualização')
+    ),
+    tr(
+      th('Fiscal'),
+      th('Educação'),
+      th('Saúde'),
+      th('Assistência')
+    )
+  )
+))
 
+
+plotar_relacoes <- function(relacao, cor, label, id = NULL, mapa, pcode) {
+  
   dados <- relacao[relacao@data$pcode == pcode,]
   
   if (dados@data[1,1] |> is.na()) return(NULL)
-
+  
   # Define layerId
   if (id |> is.null() |> not())
     id <- dados@data[[id]]
@@ -87,8 +118,8 @@ plotar_relacoes <- function(relacao, cor, label, id = NULL, mapa, pcode) {
       data = dados,
       layerId = id,
       color = cor,
-      radius = 5,
-      weight = 2,
+      radius = 10,
+      weight = 1,
       label = label,
       group = "municipe"
     )
@@ -96,3 +127,9 @@ plotar_relacoes <- function(relacao, cor, label, id = NULL, mapa, pcode) {
   #Retorna a BBOX
   return(dados@bbox)
 }
+
+concatenar <- function(...){
+  paste0(..., collapse = "|")
+}
+
+

@@ -12,3 +12,8 @@ gc()
 source("manipulacao/relacoes_geo.R")
 rm(list=ls())
 gc()
+
+# Lotes
+source("manipulacao/lotes.R")
+rm(list=ls())
+gc()
