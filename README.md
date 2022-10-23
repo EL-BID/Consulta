@@ -1,27 +1,33 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=perfil&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=perfil)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=consulta&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=consulta)
 
-<h1 align="center">Perfil da Dívida Ativa do IPTU</h1>
-<p align="center"><img src="visualizacao/www/screenshot.jpg" alt="Perfil da Dívida Ativa do IPTU" style="border: 1px solid #000000;"></p> 
+<h1 align="center">Consulta</h1>
+<p align="center"><img src="visualizacao/www/screenshot.jpg" alt="Consulta" style="border: 1px solid #000000;"></p> 
 
 
 ## Descrição e contexto
 ---
-Perfil da dívida ativa do IPTU é uma ferramenta que permite uma avaliação do atual estoque da dívida ativa do IPTU de um município a partir do perfil dos devedores - construído a partir do cruzamento dos dados da Prefeitura com bases externas. A aplicação foi elaborada como uma prova de conceito de uso de dados disponíveis para resolução de problemas urbanos no âmbito da Cooperação Técnica BR-T1496 - Potencializando o uso de Soluções de Big Data para Cidades Inteligentes.
+O "Consulta" é uma ferramenta que tem o objetivo de apresentar todas as informações presentes na base de dados da Prefeitura sobre um determinado munícipe a partir de um único <i>dashboard</i>, revelando as relações mantidas por este com a gestão municipal de uma forma visual, prática e intuitiva. A aplicação foi elaborada como uma prova de conceito de uso de dados disponíveis para resolução de problemas urbanos no âmbito da Cooperação Técnica BR-T1496 - Potencializando o uso de Soluções de Big Data para Cidades Inteligentes.
 
 ## Guia do usuário
 ---
 
-A avaliação do perfil da dívida municipal é acessado através de uma interface única intuitiva, a partir da qual cada módulo pode ser acessado.
+O Consulta é acessado através de uma interface única intuitiva, a partir da qual cada módulo pode ser selecionado.
 
-### Módulo "indicadores"
+### Módulo "Munícipe"
 
-O módulo "indicadores" permite ao usuário selecionar uma série de indicadores previamente calculados sobre o estoque da dívida e o perfil do contribuinte devedor. A partir da seleção, são exibidas camada sobre o mapa do município contendo a informação escolhida. Todos os dados são apresentados em dois níveis de agregação: setor censitário e bairros. Além da percepção visual do dado, maiores informações são oferecidas ao usuário a partir da seleção de regiões do mapa com cliques do mouse.
+O módulo "Munícipe" permite ao usuário pesquisar por qualquer pessoa presente na base de dados da prefeitura através do nome ou CPF. A partir da pesquisa, são exibidas as informações georreferenciadas das relações mantidas com a prefeitura. Uma lista das relações que não possuem dados georreferenciados (quando for o caso) complementa a exposição em uma tabela flutuante. Além da percepção visual das relações com a prefeitura, as informações pessoais do munícipe e dos imóveis com ele relacionados são oferecidas ao usuário a partir da seleção de pontos do mapa com cliques do mouse.
 
-### Módulos de análises
+### Módulo "Confrontantes"
 
-Os módulos de análises apresentam estudos feitos a partir dos dados levantados. Esses estudos são relevantes para evidenciar o potencial do uso de dados para sudisidiar a tomada de decisões no processo de formulação de políticas públicas. Atualmente, dois estudos realizados para o município de Vitória-ES estão disponíveis: a avaliação sobre o impacto da regressividade do imposto na estrutura da inadimplência; e o estudo sobre o perfil do inadimplente recorrente.
+O módulo "Confrontantes" permite ao usuário identificar os munícipes que se relacionam com cada lote da cidade. A partir da seleção de algum munícipe em específico, o usuário é remetido novamente ao módulo "Munícipe" para a visualização de maiores detalhes do mesmo.
 
-Novos estudos podem ser criados em documentos R Markdown e facilmente incluidos na aplicação pelo administrador.
+### Módulo "Download"
+
+O módulo "Confrontantes" permite ao usuário fazer uma consulta em lote dos munícipes por meio do upload de um arquivo .txt contendo uma lista de CPFs desejados. Em seguida, o usuário deve indicar quais informações ele deseja obter (atualmente, estão disponíveis as informações de telefone, e-mail, endereço e inscrições cadastrais). Ao pressionar o botão “download” e esperar alguns segundos, a transferência das informações é iniciada. Como resultado, o usuário obtém um arquivo xlsx contendo uma única planilha eletrônica onde, em cada linha, são apresentadas as informações para cada munícipe indicado.
+
+### Modo administrador
+
+Para os usuários que possuem a atribuição de administrador, um botão flutuante no canto inferior direito dá acesso ao “modo administrador”. Nesse módulo, o usuário poderá realizar todas as atribuições de manutenção de usuários (criação e exclusão, modificação, alteração de senha, etc.). Além disso, na aba conexões, é possível acompanhar a quantidade de acessos realizada por cada usuário, além do período em que tal acesso foi registrado.
 
 ## Guia de instalação
 ---
@@ -46,31 +52,29 @@ Observações adicionais:
 
 Para compreender a necessidade de alteração do código, é preciso entender que o mesmo encontra-se dividido em três "fatias" - coleta, manipulação e visualização - cada uma presente em seu próprio diretório.
 
-A "coleta" é responsável por obter todos os dados necessários para a aplicação, tanto os provenientes de bases externas quantos os fornecidos pela prefeitura. A necessidade de alteração dos códigos presentes nesta etapa resultam das peculiaridades de acesso aos dados internos quanto da inclusão de novas bases externas.
+A "coleta" é responsável por obter todos os dados necessários para a aplicação, tanto os provenientes de bases externas (dados do OpenStreetMaps) quantos os fornecidos pela prefeitura. A necessidade de alteração dos códigos presentes nesta etapa resultam tanto das peculiaridades de acesso aos dados internos quanto da inclusão de novas bases externas.
 
-Na fatia "manipulação" estão presentes a preparação das variáveis para a adequada exibição, assim como os cálculos de todos os indicadores e análises. Uma vez que seja respeitada a estrutuda dos dados de entrada, modificações só serão necessárias para a inclusão de novos indicadores ou realização de análise personalizadas.
+Na fatia "manipulação" estão presentes a preparação das variáveis para a adequada exibição: cruzamento das informações sobre o munícipe proveniente das diversas bases da prefeitura e georreferenciamento de suas relações. Uma vez que seja respeitada a estrutuda dos dados de entrada, modificações só serão necessárias para a inclusão de novas funcionalidades.
 
-A "visualização" consiste no aplicativo em Shiny que permite o acesso do usuário aos dados calculados. O arquivo "ui.R" deve ser modificado para incluir análises personalizadas.
+A "visualização" consiste no aplicativo em Shiny que permite o acesso do usuário às informações levantadas.
 
 ### Preparação dos dados
 
 Os dados fornecidos pela prefeitura devem ser adequados aos requisitos da aplicação. Na pasta "dados" encontram-se os modelos de dados necessários:
 
 - modelo_dw.xlsx
-- bairros.kml
 - imoveis.kml
+- lotes.kml
+- unidades.kml
+- unidades_saude.kml
 
 O arquivo modelo_dw.xlsx contém uma pasta do excel onde cada planilha apresenta uma tabela do Datawarehouse da prefeitura. É preciso configurar um acesso ODBC via DSN. O DSN para conexão via ODBC pode ser personalizado no arquivo "config.R". Caso se deseje modificar a forma de acesso a esse conjunto de dados, basta alterar o código do arquivo "coleta/dw_via_odbc.R".
 
-Além dos dados do datawarehouse, é preciso fornecer informações as localizações georreferenciadas dos imóveis do município, além das malhas dos bairros da cidade. Exemplos de arquivos com essas informações também estão presentes na pasta "dados" (bairros.kml e imoveis.kml - esses nomes podem ser personalizados no arquivo "config.R"). A ausência de informações desse tipo não inviabiliza a aplicação, mas requer algumas modificações:
-
-- Todos os imóveis que não tiverem localização georreferenciada serão localizados a partir dos dados fornecidos pela consulta dos endereços constantes no DW ao serviço do OpenStreetMap. É importante ter em mente que, como há o limite de uma solicitação por segundo, o tempo de demora para a utilização desse serviço é elevado.
-
-- Na inexistência da malha dos bairros, a análise poderá ser realizada exclusivamente pelos setores censitários. O código da aplicação, no entanto, não está preparado para funcionar sem essa malha, requerendo modificação nos módulos de coleta/manipulação/visualizacação.
+Além dos dados do datawarehouse, é preciso fornecer informações as localizações georreferenciadas dos imóveis do município e das unidades de atendimento da prefeitura (saúde, educação e assistência social), além das malhas dos lotes da cidade. Exemplos de arquivos com essas informações também estão presentes na pasta "dados" (lotes.kml, imoveis.kml, unidades.kml e unidades_saude.kml - esses nomes podem ser personalizados no arquivo "config.R"). Todos os imóveis que não tiverem localização georreferenciada serão localizados a partir dos dados fornecidos pela consulta dos endereços constantes no DW ao serviço do OpenStreetMap. É importante ter em mente que, como há o limite de uma solicitação por segundo, o tempo de demora para a utilização desse serviço é elevado.
 
 ### Executar o script de carga
 
-Após a personalização do código e preparação dos dados, a aplicação deve ser executada no R uma primeira vez a partir do arquivo "carga.R". Esse arquivo irá instalar todas as bibliotecas necessárias e executar as duas fatias da aplicação, terminando com a atualização da fatia de visualização.
+Após a personalização do código e preparação dos dados, a aplicação deve ser executada no R uma primeira vez a partir do arquivo "iniciar.R". Esse arquivo irá instalar todas as bibliotecas necessárias e executar as duas fatias da aplicação, terminando com a atualização da fatia de visualização.
 
 ### Implantar o ambiente de visualização em um servidor
 

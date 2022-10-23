@@ -86,26 +86,13 @@ imoveis$complemento <-
     "Complemento"]
 
 # grava dados
-saveRDS(imoveis,
-        file = "coleta/dados/imoveis.RDS")
-
-saveRDS(pessoas_imobiliario,
-        file = "coleta/dados/pessoas_imobiliario.RDS")
-
-saveRDS(pessoas_educacao,
-        file = "coleta/dados/pessoas_educacao.RDS")
-
-saveRDS(pessoas_assistencia,
-        file = "coleta/dados/pessoas_assistencia.RDS")
-
-saveRDS(pessoas_saude,
-        file = "coleta/dados/pessoas_saude.RDS")
-
-saveRDS(pessoas_fisica,
-        file = "coleta/dados/pessoas_fisica.RDS")
-
-saveRDS(pessoas_vinculo,
-        file = "coleta/dados/pessoas_vinculo.RDS")
+imoveis |> saveRDS("coleta/dados/imoveis.RDS")
+pessoas_imobiliario |> saveRDS("coleta/dados/pessoas_imobiliario.RDS")
+pessoas_educacao |> saveRDS("coleta/dados/pessoas_educacao.RDS")
+pessoas_assistencia |> saveRDS("coleta/dados/pessoas_assistencia.RDS")
+pessoas_saude |> saveRDS("coleta/dados/pessoas_saude.RDS")
+pessoas_fisica |> saveRDS("coleta/dados/pessoas_fisica.RDS")
+pessoas_vinculo |> saveRDS("coleta/dados/pessoas_vinculo.RDS")
 
 dbDisconnect(con_dw)
 print("Fim da carga de dados do DataWarehouse.")

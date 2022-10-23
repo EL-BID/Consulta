@@ -1,0 +1,6793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd http://www.google.com/kml/ext/2.2 http://code.google.com/apis/kml/schema/kml22gx.xsd">
+<Document id="Unidade_Saude_Atendimento_SHP">
+  <name>Unidade_Saude_Atendimento_SHP</name>
+  <Snippet></Snippet>
+  <Style id="IconStyle00">
+    <IconStyle>
+      <scale>0.250000</scale>
+      <Icon><href>Layer0_Symbol_16250008_0.png</href></Icon>
+    </IconStyle>
+    <LabelStyle>
+      <color>00000000</color>
+      <scale>0.000000</scale>
+    </LabelStyle>
+    <PolyStyle>
+      <color>ff000000</color>
+      <outline>0</outline>
+    </PolyStyle>
+  </Style>
+  <Folder id="FeatureLayer0">
+    <name>Unidade_Saude_Atendimento_SHP</name>
+    <Snippet></Snippet>
+    <Placemark id="ID_00000">
+      <name>PRONTO ATENDIMENTO MUNICIPAL 24 H</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>PRONTO ATENDIMENTO MUNICIPAL 24 H</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>529</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>2675110</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>PRONTO ATENDIMENTO MUNICIPAL 24 H</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>PA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>PA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>PRONTO ATENDIMENTO MUNICIPAL 24H</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA ALMIRANTE TAMANDARÉ, 15</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3137-2764</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>PRONTO ATENDIMENTO - PA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>PRAIA DO SUÁ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31455539</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,29944635</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 52.39938701S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 17 58.00685326W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.29944634812665,-20.31455538466531,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00001">
+      <name>UNIDADE DE SAÚDE - SANTA LUÍZA - DR. JOSÉ MOYSÉS</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - SANTA LUÍZA - DR. JOSÉ MOYSÉS</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>1</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>540</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>5032644</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - SANTA LUÍZA - DR. JOSÉ MOYSÉS</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF DR. JOSÉ MOYSES</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF DR. JOSÉ MOYSES</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  SANTA LUÍZA (DR. JOSÉ MOYSES)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA DOUTOR JOÃO CARLOS DE SOUZA, 330</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3135-3003 / 3004</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTA LUÍZA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29276033</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30012082</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 33.93718809S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 00.43493449W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30012081513476,-20.29276032940951,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00002">
+      <name>AMBULATÓRIO SAÚDE MENTAL</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>AMBULATÓRIO SAÚDE MENTAL</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>2</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1768</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>AMBULATÓRIO SAÚDE MENTAL</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CRE</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>NÚCLEO REGIONAL DE ESPECIALIDADES VITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA JOÃO CAETANO, 33</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3381-3320/3323-1282</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>ESTADUAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>AMBULATÓRIO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>CENTRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31951547</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33535607</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 10.25568093S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 07.28185333W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33535607036891,-20.31951546630899,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00003">
+      <name>CENTRO DE ATENÇÃO PSICOSSOCIAL ÁLCOOL E DROGAS (CAPS-AD)</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL ÁLCOOL E DROGAS (CAPS-AD)</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>3</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>79</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL ÁLCOOL E DROGAS (CAPS-AD)</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>CAPS-AD</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CAPS-AD</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL ÁLCOOL E DROGAS (CAPS-AD)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA ÁLVARO SARLO, 181</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5104/5105</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL ÁLCOOL E DROGAS (CAPS-AD)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ILHA DE SANTA MARIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31286192</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31740753</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 46.30291170S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 02.66710491W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31740752914057,-20.31286191930122,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00004">
+      <name>CENTRO DE REFERÊNCIA EM INFECÇÕES SEXUALMENTE TRANSMISSÍVEIS</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO DE REFERÊNCIA EM INFECÇÕES SEXUALMENTE TRANSMISSÍVEIS</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>4</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>83</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12084</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO DE REFERÊNCIA EM INFECÇÕES SEXUALMENTE TRANSMISSÍVEIS</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>CR DST/AIDS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CR DST/AIDS</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO DE REFERÊNCIA EM INFECÇÕES SEXUALMENTE TRANSMISSÍVEIS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA CAIS DE SÃO FRANCISCO, 54</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5106/5108</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO DE REFERÊNCIA EM INFECÇÕES SEXUALMENTE TRANSMISSÍVEIS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>CENTRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,3200717</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,34051865</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 12.25810533S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 25.86715379W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.34051865383091,-20.32007169531078,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00005">
+      <name>UNIDADE DE SAÚDE - JABOUR - DR. CARLITO VON SHILGEN</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - JABOUR - DR. CARLITO VON SHILGEN</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>5</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>541</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11924</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - JABOUR - DR. CARLITO VON SHILGEN</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>UBS JABOUR</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>UBS JABOUR</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  JABOUR (DR. CARLITO VON SHILGEN)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA ENGENHEIRO CÉSAR DANTAS, 176</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3135-2030 / 2031</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>UNIDADE BÁSICA DE SAÚDE (UBS)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>JABOUR</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,2603126</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,2946653</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 15 37.12537463S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 17 40.79507391W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.29466529830794,-20.26031260344988,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00006">
+      <name>UNIDADE DE SAÚDE - FONTE GRANDE - DR. AFFONSO SCHWAB</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - FONTE GRANDE - DR. AFFONSO SCHWAB</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>6</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>549</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12173</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - FONTE GRANDE - DR. AFFONSO SCHWAB</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>UBS FONTE GRANDE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF FONTE GRANDE</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE - FONTE GRANDE (DR. AFFONSO SCHWAB)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA GRACIANO NEVES, 352</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5116 / 5117</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>CENTRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31662992</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33699137</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 59.86771161S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 13.16894738W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33699137427102,-20.31662991927597,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00007">
+      <name>UNIDADE DE SAÚDE - GRANDE VITÓRIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - GRANDE VITÓRIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>7</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>520</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11894</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - GRANDE VITÓRIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF GRANDE VITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF GRANDE VITÓRIA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  GRANDE VITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA DA VITÓRIA 1, 112</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5083 / 5084</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>GRANDE VITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29024077</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,34389302</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 24.86678518S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 38.01485436W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.34389301510004,-20.29024077304784,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00008">
+      <name>UNIDADE DE SAÚDE - CENTRO - GENY GRIJÓ</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - CENTRO - GENY GRIJÓ</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>8</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>533</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12262</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - CENTRO - GENY GRIJÓ</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF VITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF VITÓRIA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE - CENTRO (GENY GRIJÓ)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA CAIS DE SÃO FRANCISCO, 54</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5102</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>CENTRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,32006821</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,34045468</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 12.24556664S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 25.63684907W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.34045468029784,-20.32006821234112,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00009">
+      <name>UNIDADE DE SAÚDE - JESUS DE NAZARÉ - DR. LUIZ CASTELLAR DA SILVA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - JESUS DE NAZARÉ - DR. LUIZ CASTELLAR DA SILVA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>9</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>546</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11797</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - JESUS DE NAZARÉ - DR. LUIZ CASTELLAR DA SILVA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF JESUS DE NAZARET</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF JESUS DE NAZARET</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  JESUS DE NAZARÉ (DR. LUIZ CASTELLAR DA SILVA)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA HELENA MULLER, 168</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3382-6740 / 6741</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>JESUS DE NAZARETH</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31982543</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30418791</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 11.37155085S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 15.07649103W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30418791417582,-20.31982543017641,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00010">
+      <name>UNIDADE DE SAÚDE CONSOLAÇÃO - MARIA RANGEL DOS PASSOS</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE CONSOLAÇÃO - MARIA RANGEL DOS PASSOS</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>10</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>537</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12165</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE CONSOLAÇÃO - MARIA RANGEL DOS PASSOS</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF CONSOLAÇÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF CONSOLAÇÃO</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  CONSOLAÇÃO - MARIA RANGEL DOS PASSOS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA DESEMBARGADOR OTÁVIO DE CARVALHO LENGRUBER, 185</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3382-6744 / 6745</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>GURIGICA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,30322898</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30438219</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 11.62433971S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 15.77588433W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30438219009257,-20.30322898263938,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00011">
+      <name>UNIDADE DE SAÚDE - BONFIM - THOMAZ TOMMASSI</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - BONFIM - THOMAZ TOMMASSI</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>11</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>538</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>28185</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - BONFIM - THOMAZ TOMMASSI</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF THOMAZ TOMMASSI</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF THOMAZ TOMMASSI</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE - BONFIM (THOMAZ TOMMASSI)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  MARECHAL CAMPOS, 1490</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3335-7187</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>BONFIM</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29895849</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31503035</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 56.25057332S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 54.10926524W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31503035145442,-20.2989584919741,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00012">
+      <name>UNIDADE DE SAÚDE - PRAIA DO SUÁ - LUCILO BORGES SANT’ANNA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - PRAIA DO SUÁ - LUCILO BORGES SANT’ANNA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>12</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>532</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>28177</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - PRAIA DO SUÁ - LUCILO BORGES SANT’ANNA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF PRAIA DO SUÁ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF PRAIA DO SUÁ</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  PRAIA DO SUÁ (LUCILO BORGES SANT’ANNA)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  JOÃO BAPTISTA PARRA, 45</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3382-6512 / 6513</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ENSEADA DO SUÁ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31510043</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,29841212</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 54.36154978S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 17 54.28364496W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.29841212359902,-20.31510042987857,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00013">
+      <name>UNIDADE DE SAÚDE - JARDIM DA PENHA (OTAVIANO RODRIGUES DE CARVALHO)</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - JARDIM DA PENHA (OTAVIANO RODRIGUES DE CARVALHO)</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>13</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>511</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11878</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - JARDIM DA PENHA (OTAVIANO RODRIGUES DE CARVALHO)</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF JARDIM DA PENHA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF JARDIM DA PENHA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  JARDIM DA PENHA (OTAVIANO RODRIGUES DE CARVALHO)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  FRANCISCO GENEROSO DA FONSECA, 320</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3382-6747 / 6748 / 6749</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>JARDIM DA PENHA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,28519976</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,2976188</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 06.71913002S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 17 51.42767205W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.29761879779209,-20.28519975772478,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00014">
+      <name>UNIDADE DE SAÚDE - JARDIM CAMBURI - RAUL OLIVEIRA NUNES</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - JARDIM CAMBURI - RAUL OLIVEIRA NUNES</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>14</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>531</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12033</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - JARDIM CAMBURI - RAUL OLIVEIRA NUNES</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>UBS JARDIM CAMBURI</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>UBS JARDIM CAMBURI</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  JARDIM CAMBURI (RAUL OLIVEIRA NUNES)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA BELMIRO TEIXEIRA PIMENTA, 640</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3138-8130 / 8131</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>UNIDADE BÁSICA DE SAÚDE (UBS)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>JARDIM CAMBURI</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,25529678</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,26947677</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 15 19.06842423S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 16 10.11635545W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.26947676540348,-20.25529678389559,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00015">
+      <name>UNIDADE DE SAÚDE - MARIA ORTIZ</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - MARIA ORTIZ</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>15</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>551</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11908</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - MARIA ORTIZ</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>UBS MARIA ORTIZ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>UBS MARIA ORTIZ</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  MARIA ORTIZ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA PROFESSOR RENATO RIBEIRO DOS SANTOS, 271</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3135-2033 / 2034</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>UNIDADE BÁSICA DE SAÚDE (UBS)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>MARIA ORTIZ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,257318</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,29844839</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 15 26.34481102S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 17 54.41420663W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.29844839072963,-20.25731800244772,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00016">
+      <name>UNIDADE DE SAÚDE - FORTE SÃO JOÃO - DR. BOLIVAR DE ABREU</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - FORTE SÃO JOÃO - DR. BOLIVAR DE ABREU</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>16</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>514</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11827</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - FORTE SÃO JOÃO - DR. BOLIVAR DE ABREU</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF FORTE SÃO JOÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF FORTE SÃO JOÃO</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  FORTE SÃO JOÃO (DR. BOLIVAR DE ABREU)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  MARECHAL MASCARENHAS DE MORAES, 1185</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5081 / 5080</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>FORTE SÃO JOÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31809332</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,32287524</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 05.13595121S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 22.35085243W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.32287523678558,-20.31809331916577,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00017">
+      <name>UNIDADE DE SAÚDE - REPÚBLICA - DR. JOLINDO MARTINS</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - REPÚBLICA - DR. JOLINDO MARTINS</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>17</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>519</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12122</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - REPÚBLICA - DR. JOLINDO MARTINS</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>EACS REPÚBLICA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>EACS REPÚBLICA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  REPÚBLICA (DR. JOLINDO MARTINS)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  ROZENDO SERAPIÃO DE SOUZA FILHO, 490</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3135-2035</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA AGENTE COMUNITÁRIO DE SAÚDE (EACS)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>REPÚBLICA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,27245712</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,29214725</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 16 20.84561987S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 17 31.73008249W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.29214724513611,-20.27245711601647,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00018">
+      <name>UNIDADE DE SAÚDE - SANTO ANTÔNIO - JÚLIO CÉZAR PRATES MATTOS</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - SANTO ANTÔNIO - JÚLIO CÉZAR PRATES MATTOS</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>18</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>542</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11789</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - SANTO ANTÔNIO - JÚLIO CÉZAR PRATES MATTOS</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF JÚLIO CÉZAR PR</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF JÚLIO CÉZAR PR</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  SANTO ANTÔNIO (JÚLIO CÉZAR PRATES MATTOS)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA ERNESTO BASSINI, 165</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5096 / 5097</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTA TEREZA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,30817823</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,35148935</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 29.44162340S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 21 05.36167303W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.35148935361816,-20.3081782281077,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00019">
+      <name>UNIDADE DE SAÚDE - ILHA DO PRÍNCIPE - DR. MANOEL ROCHA COUTINHO</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - ILHA DO PRÍNCIPE - DR. MANOEL ROCHA COUTINHO</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>19</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>543</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11916</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - ILHA DO PRÍNCIPE - DR. MANOEL ROCHA COUTINHO</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF ILHA DO PRÍNCIP</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF ILHA DO PRÍNCIP</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  ILHA DO PRINCIPE (DR. MANOEL ROCHA COUTINHO)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA FENELON GOMES, 138</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-2116 / 5087</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ILHA DO PRÍNCIPE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,32193999</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,34947266</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 18.98396355S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 58.10158775W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.34947266326456,-20.32193998925881,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00020">
+      <name>UNIDADE DE SAÚDE ALAGOANO - ARIOVALDO FAVALESSA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE ALAGOANO - ARIOVALDO FAVALESSA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>20</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>522</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12068</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE ALAGOANO - ARIOVALDO FAVALESSA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF ARIOV. FAVALESSA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF ARIOV. FAVALESSA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  ARIOVALDO FAVALESSA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>SRV ERNESTO CALIARI, S/N</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5112</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>CARATOÍRA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31546943</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,35271395</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 55.68995311S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 21 09.77020678W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.35271394632909,-20.31546943080515,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00021">
+      <name>UNIDADE DE SAÚDE - MARUÍPE</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - MARUÍPE</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>21</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>548</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11959</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - MARUÍPE</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF MARUÍPE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF MARUÍPE</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  MARUÍPE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA VICTOR FRITOLI NAVARRO, 20</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3382-6742 / 6743</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>MARUÍPE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29620343</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,3164533</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 46.33235308S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 59.23188427W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31645330118704,-20.2962034307957,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00022">
+      <name>UNIDADE DE SAÚDE - ANDORINHAS - DR. LUIS CLAUDIO PASSOS</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - ANDORINHAS - DR. LUIS CLAUDIO PASSOS</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>22</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>513</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12092</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - ANDORINHAS - DR. LUIS CLAUDIO PASSOS</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF ANDORINHAS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF ANDORINHAS</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  ANDORINHAS - DR. LUIS CLAUDIO PASSOS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA EMÍLIO FERREIRA DA SILVA, 160</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3382-6758 / 6759</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ANDORINHAS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29056396</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30690439</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 26.03026338S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 24.85579073W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30690438631261,-20.29056396143654,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00023">
+      <name>HOSPITAL DA POLÍCIA MILITAR</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL DA POLÍCIA MILITAR</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>23</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1763</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL DA POLÍCIA MILITAR</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>HPM</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>HOSPITAL DA POLÍCIA MILITAR</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  JOUBERT DE BARROS, 555</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3137 1750</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>ESTADUAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>BENTO FERREIRA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31362156</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,3107562</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 49.03761732S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 38.72230316W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31075619532258,-20.31362155975055,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00024">
+      <name>MATERNIDADE PROMATRE</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>MATERNIDADE PROMATRE</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>24</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1767</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>MATERNIDADE PROMATRE</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>MATERNIDADE PROMATRE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  VITÓRIA, 1100</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3223-5056</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>FORTE SÃO JOÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31574901</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,32237863</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 56.69643187S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 20.56307825W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.32237863284828,-20.31574900823821,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00025">
+      <name>CENTRO DE VIGILÂNCIA EM SAÚDE AMBIENTAL (CVSA)</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO DE VIGILÂNCIA EM SAÚDE AMBIENTAL (CVSA)</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>25</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>554</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO DE VIGILÂNCIA EM SAÚDE AMBIENTAL (CVSA)</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>CVSA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CVSA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO DE VIGILÂNCIA EM SAÚDE AMBIENTAL (CVSA)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA SÃO SEBASTIÃO, 99</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3382-6752</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>VIGILÂNCIA SANITÁRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>RESISTÊNCIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,27739295</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31732417</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 16 38.61461167S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 02.36700893W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31732416914808,-20.2773929470729,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00026">
+      <name>HOSPITAL DA ASSOCIAÇÃO DOS FUNCIONÁRIOS PÚBLICOS DO ESTADO DO ESPÍRITO SANTO</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL DA ASSOCIAÇÃO DOS FUNCIONÁRIOS PÚBLICOS DO ESTADO DO ESPÍRITO SANTO</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>26</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1773</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL DA ASSOCIAÇÃO DOS FUNCIONÁRIOS PÚBLICOS DO ESTADO DO ESPÍRITO SANTO</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>AFPES</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>AFPES</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>ASSOCIAÇÃO DOS FUNCIONÁRIOS PÚBLICOS DO ESPÍRITO SANTO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA PEDRO PALÁCIOS, 155</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3223-7186/3223-8753</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>ESTADUAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>CENTRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,32020481</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33814118</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 12.73730546S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 17.30824760W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33814117988872,-20.32020480645771,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00027">
+      <name>UNIDADE DE SAÚDE - SANTO ANDRÉ</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - SANTO ANDRÉ</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>27</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>535</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12149</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - SANTO ANDRÉ</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF SANTO ANDRÉ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF SANTO ANDRÉ</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  SANTO ANDRÉ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA DA CORAGEM, 180</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3323-8130</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTO ANDRÉ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,27800203</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33242044</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 16 40.80730450S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 56.71357720W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33242043811078,-20.27800202841266,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00028">
+      <name>PRONTO ATENDIMENTO DE SÃO PEDRO</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>PRONTO ATENDIMENTO DE SÃO PEDRO</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>28</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>526</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11835</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>PRONTO ATENDIMENTO DE SÃO PEDRO</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>PA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>PA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>PRONTO ATENDIMENTO DE SÃO PEDRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>ROD SERAFIM DERENZI, 4570</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5099/5100</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>PRONTO ATENDIMENTO - PA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SÃO JOSÉ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,28475632</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33248441</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 05.12273488S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 56.94388866W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33248441351715,-20.28475631462905,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00029">
+      <name>HOSPITAL SANTA CASA DE MISERICÓRDIA DE VITÓRIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL SANTA CASA DE MISERICÓRDIA DE VITÓRIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>29</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1764</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL SANTA CASA DE MISERICÓRDIA DE VITÓRIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>HOSPITAL SANTA CASA DE MISERICÓRDIA DE VITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA DOUTOR JOÃO DOS SANTOS NEVES, 143</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3322-0074</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>PARQUE MOSCOSO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,32080927</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,34443667</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 14.91335989S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 39.97201785W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.34443667162527,-20.3208092660211,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00030">
+      <name>HOSPITAL UNIVERSITÁRIO CASSIANO ANTÔNIO DE MORAES - HUCAM</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL UNIVERSITÁRIO CASSIANO ANTÔNIO DE MORAES - HUCAM</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>30</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1766</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL UNIVERSITÁRIO CASSIANO ANTÔNIO DE MORAES - HUCAM</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>HUCAM</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>HOSPITAL UNIVERSITÁRIO CASSIANO ANTÔNIO DE MORAES - HUCAM</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  MARECHAL CAMPOS, 13555</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3335-7222/7150/7153</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>FEDERAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTA CECÍLIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,30015541</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31717944</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 00.55948678S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 01.84598447W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31717944012937,-20.30015541237891,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00031">
+      <name>HOSPITAL INFANTIL NOSSA SENHORA DA GLÓRIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL INFANTIL NOSSA SENHORA DA GLÓRIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>31</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1772</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL INFANTIL NOSSA SENHORA DA GLÓRIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>HOSPITAL INFANTIL NOSSA SENHORA DA GLÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA MARY UBIRAJARA, 205</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3324-1566</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>ESTADUAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTA LÚCIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,30800593</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,29768808</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 28.82134407S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 17 51.67710310W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.29768808419574,-20.30800592829419,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00032">
+      <name>HOSPITAL SÃO LUCAS</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL SÃO LUCAS</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>32</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1770</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL SÃO LUCAS</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>HOSPITAL SÃO LUCAS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA DESEMBARGADOR JOSÉ VICENTE, 1533</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3381-3385/3367/3368</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>ESTADUAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>FORTE SÃO JOÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31835309</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,32291334</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 06.07111198S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 22.48802138W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.3229133392724,-20.31835308604532,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00033">
+      <name>SAMU SERVIÇO DE ATENDIMENTO MÓVEL DE URGÊNCIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>SAMU SERVIÇO DE ATENDIMENTO MÓVEL DE URGÊNCIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>33</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1774</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>SAMU SERVIÇO DE ATENDIMENTO MÓVEL DE URGÊNCIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>SAMU Serviço de Atendimento Móvel de Urgência</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA RAIMUNDO NONATO, 31</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>192</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>ESTADUAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>FORTE SÃO JOÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31875374</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,32341722</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 07.51345047S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 24.30200041W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.32341722233687,-20.31875373562656,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00034">
+      <name>HOSPITAL PEDIÁTRICO DE VITÓRIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL PEDIÁTRICO DE VITÓRIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>34</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1771</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL PEDIÁTRICO DE VITÓRIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>HOSPITAL PEDIÁTRICO DE VITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA MARY UBIRAJARA, 200</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTA LÚCIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,30806012</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,29736122</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 29.01644615S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 17 50.50040393W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.29736122331386,-20.30806012331667,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00035">
+      <name>HOSPITAL DO CORAÇÃO</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL DO CORAÇÃO</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>35</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1769</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL DO CORAÇÃO</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>SOCOR</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>SOCOR - HOSPITAL DO CORAÇÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA CONSTANTE SODRÉ, 335</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3200-3090</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTA LÚCIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,30316187</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30145899</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 11.38273273S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 05.25236690W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30145899080436,-20.30316186958707,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00036">
+      <name>UNIDADE DE SAÚDE -  ILHA DE SANTA MARIA - COVID-19</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE -  ILHA DE SANTA MARIA - COVID-19</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>36</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>530</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12157</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE -  ILHA DE SANTA MARIA - COVID-19</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>UBS ILHA DE S. MARIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>US COVID</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  ILHA DE SANTA MARIA - COVID-19</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA HERMES CURRY CARNEIRO, 360</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5089 / 5090</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>UNIDADE BÁSICA DE SAÚDE (UBS)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ILHA DE SANTA MARIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,313502</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31703395</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 48.60720940S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 01.32222275W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31703395076507,-20.31350200199639,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00037">
+      <name>HOSPITAL CENTRAL</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL CENTRAL</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>37</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1775</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL CENTRAL</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>HOSPITAL CENTRAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA SÃO JOSÉ, 76</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3223-2011/3222-2615</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>ESTADUAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>CENTRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,3170601</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,34010899</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 01.41636269S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 24.39234716W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.34010898532213,-20.31706010013217,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00038">
+      <name>HOSPITAL E MATERNIDADE SANTA PAULA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL E MATERNIDADE SANTA PAULA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>38</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1762</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL E MATERNIDADE SANTA PAULA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>HOSPITAL E MATERNIDADE SANTA PAULA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  DOUTOR HERWAN MODENESE WANDERLEY, 100</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3395-2000</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>JARDIM CAMBURI</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,25523469</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,27014992</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 15 18.84489291S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 16 12.53972773W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.27014992436877,-20.25523469186171,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00039">
+      <name>HOSPITAL SANTA RITA DE CÁSSIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL SANTA RITA DE CÁSSIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>39</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1765</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL SANTA RITA DE CÁSSIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>HOSPITAL SANTA RITA DE CÁSSIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  MARECHAL CAMPOS, 1579</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3334-8077/8076/8000</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTA CECÍLIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29780787</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31829174</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 52.10832004S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 05.85027503W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31829174306336,-20.29780786606302,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00040">
+      <name>CENTRO MUNICIPAL DE ESPECIALIDADES DE VITÓRIA (CMEV)</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO MUNICIPAL DE ESPECIALIDADES DE VITÓRIA (CMEV)</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>40</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1163</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>3038467</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO MUNICIPAL DE ESPECIALIDADES DE VITÓRIA (CMEV)</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>CMEV</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CMEV</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO MUNICIPAL DE ESPECIALIDADES DE VITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  DÁRIO LOURENÇO DE SOUZA, 120</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3322-2799</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO MUNCIPAL DE ESPECIALIDADES - CME</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>MÁRIO CYPRESTE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31936476</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,35373081</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 09.71312665S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 21 13.43092922W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.35373081367341,-20.31936475678881,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00041">
+      <name>CENTRO DE ESPECIALIDADES ODONTOLÓGICAS - CENTRO</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO DE ESPECIALIDADES ODONTOLÓGICAS - CENTRO</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>41</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2339</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO DE ESPECIALIDADES ODONTOLÓGICAS - CENTRO</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CMEV</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO MUNICIPAL DE ESPECIALIDADES DE VITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  DÁRIO LOURENÇO DE SOUZA, 120</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO DE ESPECIALIDADE ODONTOLÓGICA - CEO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>MÁRIO CYPRESTE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31936476</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,35373081</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 09.71312665S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 21 13.43092922W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.35373081367341,-20.31936475678881,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00042">
+      <name>UNIDADE DE SAÚDE SÃO PEDRO V - CONQUISTA/NOVA PALESTINA - MARIA LEDA SANTOS</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE SÃO PEDRO V - CONQUISTA/NOVA PALESTINA - MARIA LEDA SANTOS</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>42</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>528</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12254</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE SÃO PEDRO V - CONQUISTA/NOVA PALESTINA - MARIA LEDA SANTOS</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF CONQUISTA/NOVA P</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF CONQUISTA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE - CONQUISTA - MARIA LEDA SANTOS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>ROD SERAFIM DERENZI, 6090</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3317-9610 / 3233-1828</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>CONQUISTA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,27634698</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,32494883</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 16 34.84912507S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 29.81578560W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.32494882933401,-20.27634697857156,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00043">
+      <name>UNIDADE DE SAUDE - SANTA MARTHA - BENEDITO GOMES DA SILVA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAUDE - SANTA MARTHA - BENEDITO GOMES DA SILVA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>43</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1920</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>3925757</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAUDE - SANTA MARTHA - BENEDITO GOMES DA SILVA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF SANTA MARTHA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF SANTA MARTHA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  SANTA MARTHA - BENEDITO GOMES DA SILVA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA GETÚLIO MIRANDA, 70</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3324-7558</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTA MARTHA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,28639602</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31037261</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 11.02565449S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 37.34139779W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31037261049833,-20.2863960145228,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00044">
+      <name>UNIDADE DE SAÚDE - RESISTÊNCIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - RESISTÊNCIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>44</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>506</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>2630001</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - RESISTÊNCIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF RESISTÊNCIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF RESISTÊNCIA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  RESISTÊNCIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA NOSSA SENHORA DA CONCEIÇÃO, 270</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3382-6762 / 6763</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>RESISTÊNCIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,27118497</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31749586</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 16 16.26590098S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 02.98507961W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31749585544591,-20.27118497188003,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00045">
+      <name>UNIDADE DE SAÚDE - DA PENHA - DR. GILSON SANTOS</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - DA PENHA - DR. GILSON SANTOS</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>45</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>550</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12114</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - DA PENHA - DR. GILSON SANTOS</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF GILSON SANTOS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF GILSON SANTOS</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  DA PENHA - DR. GILSON SANTOS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA PADRE LUIZ KOESTER, 78</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3382-6760</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>DA PENHA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29786827</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31164734</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 52.32577202S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 41.93043219W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31164734227612,-20.29786826938984,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00046">
+      <name>ESCOLA TÉCNICA E FORMAÇÃO PROFISSIONAL DE SAÚDE</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>ESCOLA TÉCNICA E FORMAÇÃO PROFISSIONAL DE SAÚDE</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>46</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2262</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>ESCOLA TÉCNICA E FORMAÇÃO PROFISSIONAL DE SAÚDE</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ETSUS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>ESCOLA TÉCNICA E FORMAÇÃO PROFISSIONAL DE SAÚDE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA MARIA DE LOURDES GARCIA, 520</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESCOLA TÉCNICA E FORMAÇÃO PROFISSIONAL DE SAÚDE</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ILHA DE SANTA MARIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31584675</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31599467</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 57.04829220S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 57.58079608W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31599466557791,-20.31584674721802,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00047">
+      <name>CENTRAL DE TRANSPORTE SANITÁRIO</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRAL DE TRANSPORTE SANITÁRIO</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>47</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2338</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRAL DE TRANSPORTE SANITÁRIO</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRAL DE TRANSPORTE SANITÁRIO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  MARECHAL MASCARENHAS DE MORAES, 1185</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRAL DE AMBULÂNCIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>FORTE SÃO JOÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31795827</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,32306996</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 04.64976720S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 23.05184361W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.32306995655738,-20.31795826805189,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00048">
+      <name>RESIDÊNCIA TERAPÊUTICA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>RESIDÊNCIA TERAPÊUTICA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>48</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2340</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>RESIDÊNCIA TERAPÊUTICA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>RESIDÊNCIA TERAPÊUTICA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA AMÉLIA DA CUNHA ORNELAS, 566</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>RESIDÊNCIA TERAPÊUTICA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>BENTO FERREIRA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,3151162</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30798292</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 54.41833345S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 28.73852898W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30798292471767,-20.3151162031206,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00049">
+      <name>CASA DE ACOLHIDA TRANSITÓRIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CASA DE ACOLHIDA TRANSITÓRIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>49</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2395</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CASA DE ACOLHIDA TRANSITÓRIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CASA DE ACOLHIDA TRANSITÓRIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA ÁLVARO SARLO, 181</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO DE PREVENÇÃO E TRATAMENTO DE TOXICOMÂNOS - CPTT/CAPS-AD3</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ILHA DE SANTA MARIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31292111</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31739167</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 46.51598595S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 02.61000448W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31739166790972,-20.31292110659416,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00050">
+      <name>CENTRO DE REFERÊNCIA DE ATENDIMENTO AO IDOSO (CRAI)</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO DE REFERÊNCIA DE ATENDIMENTO AO IDOSO (CRAI)</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>50</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>588</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11983</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO DE REFERÊNCIA DE ATENDIMENTO AO IDOSO (CRAI)</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>CRAI</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CRAI</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO DE REFERÊNCIA DE ATENDIMENTO AO IDOSO (CRAI)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  MARECHAL MASCARENHAS DE MORAES, 1185  CRAI</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5010</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CRAI - CENTRO DE REFERÊNCIA DE ATENDIMENTO AO IDOSO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>FORTE SÃO JOÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31812331</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,32261618</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 05.24390491S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 21.41825700W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.32261618250061,-20.31812330630435,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00051">
+      <name>UNIDADE DE SAÚDE - SÃO CRISTOVÃO</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - SÃO CRISTOVÃO</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>51</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2407</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>7145721</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - SÃO CRISTOVÃO</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF SÃO CRISTÓVÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF SÃO CRISTÓVÃO</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  SÃO CRISTOVÃO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA ALCIDES LYRIO DO NASCIMENTO, 60</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>TABUAZEIRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29237528</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,3213669</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 32.55100243S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 16.92084148W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.32136690041018,-20.29237527783885,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00052">
+      <name>CENTRO MUNICIPAL DE ESPECIALIDADES SÃO PEDRO (CMESP)</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO MUNICIPAL DE ESPECIALIDADES SÃO PEDRO (CMESP)</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>52</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2411</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO MUNICIPAL DE ESPECIALIDADES SÃO PEDRO (CMESP)</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>CMESP</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CMESP</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO MUNICIPAL DE ESPECIALIDADES SÃO PEDRO (CMESP)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>ROD SERAFIM DERENZI, 4570</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO MUNCIPAL DE ESPECIALIDADES - CME</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SÃO JOSÉ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,28508651</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33244962</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 06.31144603S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 56.81863786W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33244962162825,-20.28508651217127,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00053">
+      <name>CENTRO DE ESPECIALIDADES ODONTOLÓGICAS - SÃO PEDRO (SÃO JOSÉ)</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO DE ESPECIALIDADES ODONTOLÓGICAS - SÃO PEDRO (SÃO JOSÉ)</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>53</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2414</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO DE ESPECIALIDADES ODONTOLÓGICAS - SÃO PEDRO (SÃO JOSÉ)</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CMESP</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO MUNICIPAL DE ESPECIALIDADES SÃO PEDRO (CMESP)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>ROD SERAFIM DERENZI, 4570</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO DE ESPECIALIDADE ODONTOLÓGICA - CEO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SÃO JOSÉ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,28508651</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33244962</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 06.31144603S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 56.81863786W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33244962162825,-20.28508651217127,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00054">
+      <name>CENTRO DE ATENÇÃO PSICOSSOCIAL SÃO PEDRO (CAPS SP III)</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL SÃO PEDRO (CAPS SP III)</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>54</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2412</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL SÃO PEDRO (CAPS SP III)</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>CAPS SP III</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CAPS SP III</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL SÃO PEDRO (CAPS SP III)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>ROD SERAFIM DERENZI, 4570</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SÃO JOSÉ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,28531901</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33246363</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 07.14842304S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 56.86908270W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33246363408215,-20.28531900578561,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00055">
+      <name>FARMÁCIA CIDADÃ</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>FARMÁCIA CIDADÃ</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>55</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2523</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>FARMÁCIA CIDADÃ</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>FARMÁCIA CIDADÃ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  PRINCESA ISABEL, 245</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>FARMÁCIA CIDADÃ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>CENTRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31980971</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33233549</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 19 11.31496807S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 56.40777467W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33233549296305,-20.31980971273881,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00056">
+      <name>UNIDADE DE SAÚDE - ITARARÉ - DILSON DOS SANTOS LOUREIRO</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - ITARARÉ - DILSON DOS SANTOS LOUREIRO</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>56</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2528</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>7468466</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - ITARARÉ - DILSON DOS SANTOS LOUREIRO</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF ITARARÉ</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE - ITARARÉ - DILSON DOS SANTOS LOUREIRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA DOUTOR ARLINDO SODRÉ, 260</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ITARARÉ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29518295</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30853306</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 42.65860305S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 30.71900774W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30853305770628,-20.29518294467748,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00057">
+      <name>MATERNIDADE SANTA ÚRSULA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>MATERNIDADE SANTA ÚRSULA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>57</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2533</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>MATERNIDADE SANTA ÚRSULA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>MATERNIDADE SANTA ÚRSULA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  CARLOS GOMES DE SÁ, 60</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>MATA DA PRAIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,27513205</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30026014</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 16 30.47538084S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 00.93652136W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30026014482089,-20.2751320496193,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00058">
+      <name>Santa Úrsula Pediatria</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>Santa Úrsula Pediatria</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>58</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2625</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>Santa Úrsula Pediatria</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>MATERNIDADE SANTA ÚRSULA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  CARLOS GOMES DE SÁ, 60</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 2122-4000</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CLÍNICA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>MATA DA PRAIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,27513205</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30026014</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 16 30.47538084S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 00.93652136W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30026014482089,-20.2751320496193,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00059">
+      <name>SERVIÇO DE PSIQUIATRIA APLICADA - CASA VITÓRIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>SERVIÇO DE PSIQUIATRIA APLICADA - CASA VITÓRIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>59</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2590</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>SERVIÇO DE PSIQUIATRIA APLICADA - CASA VITÓRIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>Serviço de Psiquiatria Aplicada - Casa Vitória</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA DOUTOR ARLINDO SODRÉ, 640</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3317-3400</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ITARARÉ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,29370125</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30577782</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 17 37.32449741S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 20.80014013W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30577781670394,-20.2937012486656,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00060">
+      <name>HOSPITAL PRAIA DO CANTO</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>HOSPITAL PRAIA DO CANTO</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>60</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2588</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>HOSPITAL PRAIA DO CANTO</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>Hospital Praia do Canto</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA DUKLA DE AGUIAR, 129</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 2104-6999 / 3325-3455</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>PARTICULAR</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>HOSPITAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>PRAIA DO SUÁ</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31155816</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,29576346</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 41.60938894S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 17 44.74846252W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.29576346181153,-20.31155816298025,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00061">
+      <name>UNIDADE DE SAÚDE - DO QUADRO - AVELINA MARIA LACERDA GONÇALVES</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - DO QUADRO - AVELINA MARIA LACERDA GONÇALVES</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>61</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2706</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>11975</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - DO QUADRO - AVELINA MARIA LACERDA GONÇALVES</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>EACS DO QUADRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>EACS DO QUADRO</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE - DO QUADRO - AVELINA MARIA LACERDA GONÇALVES</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA LUCIDATO VIEIRA FALCÃO, 5</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA AGENTE COMUNITÁRIO DE SAÚDE (EACS)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>DO QUADRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31625482</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,34942902</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 58.51734988S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 57.94447509W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.34942902085884,-20.31625481879481,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00062">
+      <name>CENTRO DE ATENÇÃO PSICOSSOCIAL DA ILHA DE SANTA MARIA (CAPS II)</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL DA ILHA DE SANTA MARIA (CAPS II)</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>62</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2707</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL DA ILHA DE SANTA MARIA (CAPS II)</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>CAPS II</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CAPS II</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL DA ILHA DE SANTA MARIA (CAPS II)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA JOSÉ CARVALHO, 404</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ILHA DE SANTA MARIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31403102</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,31734053</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 50.51168480S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 19 02.42589352W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31734052597808,-20.31403102294125,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00063">
+      <name>CENTRO DE ATENÇÃO PSICOSSOCIAL INFANTO JUVENIL - CAPSI</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL INFANTO JUVENIL - CAPSI</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>63</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>64</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>5526175</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL INFANTO JUVENIL - CAPSI</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>CAPSI</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>CAPSI</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL INFANTO JUVENIL - CAPSI</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA AMÉLIA DA CUNHA ORNELAS, 431</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3225-3698</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CENTRO DE ATENÇÃO PSICOSSOCIAL INFANTIL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>BENTO FERREIRA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,31382474</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,30786631</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 18 49.76905293S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 18 28.31872126W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30786631146236,-20.31382473631132,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00064">
+      <name>UNIDADE DE SAÚDE - ILHA DAS CAIEIRAS - VEREADOR NENEL MIRANDA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - ILHA DAS CAIEIRAS - VEREADOR NENEL MIRANDA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>64</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>545</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>12076</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - ILHA DAS CAIEIRAS - VEREADOR NENEL MIRANDA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>ESF ILHA D. CAIEIRAS</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>ESF ILHA D. CAIEIRAS</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  ILHA DAS CAIEIRAS - VEREADOR NENEL MIRANDA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA FELICIDADE CORREIA DOS SANTOS, 40</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5085 / 5086</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>ESTRATÉGIA SAUDE DA FAMÍLIA (ESF)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SÃO PEDRO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td>-20,28001715</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td>-40,33707394</td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td>20 16 48.06175182S</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td>040 20 13.46618592W</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.33707394053258,-20.28001715266853,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00065">
+      <name>UNIDADE DE SAÚDE - ILHA DE SANTA MARIA</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>UNIDADE DE SAÚDE - ILHA DE SANTA MARIA</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>65</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>2737</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>UNIDADE DE SAÚDE - ILHA DE SANTA MARIA</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>UBS ILHA DE S.MARIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td>UBS ILHA SANTA MARIA</td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>UNIDADE DE SAÚDE -  ILHA DE SANTA MARIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>RUA JOÃO BASTOS VIEIRA, SN</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3132-5089</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>UNIDADE BÁSICA DE SAÚDE (UBS)</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>ILHA DE SANTA MARIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td></td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.31884904538407,-20.31273194010411,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="ID_00066">
+      <name>LABORATÓRIO CENTRAL MUNICIPAL</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+<td>LABORATÓRIO CENTRAL MUNICIPAL</td>
+</tr>
+<tr>
+<td>
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+<tr>
+<td>FID</td>
+<td>66</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>codUnidade</td>
+<td>1916</td>
+</tr>
+<tr>
+<td>CNES</td>
+<td>0</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>nomeUnidad</td>
+<td>LABORATÓRIO CENTRAL MUNICIPAL</td>
+</tr>
+<tr>
+<td>siglaUnida</td>
+<td>PA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>siglaLocal</td>
+<td></td>
+</tr>
+<tr>
+<td>nomeLocal</td>
+<td>LABORATORIO CENTRAL MUNICIPAL</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>endereco</td>
+<td>AV  NOSSA SENHORA DA PENHA, 1993  Loja</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>(27) 3324-5876</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>natureza</td>
+<td>MUNICIPAL</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>LABORATÓRIO</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>areaAtuaca</td>
+<td>SAÚDE</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>SANTA LÚCIA</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>ativo</td>
+<td>1</td>
+</tr>
+<tr>
+<td>latitudeGr</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitudeG</td>
+<td></td>
+</tr>
+<tr>
+<td>latitudeGM</td>
+<td></td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>longitud_1</td>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
+]]></description>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Point>
+        <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+        <coordinates> -40.30170996259501,-20.29428712911567,0</coordinates>
+      </Point>
+    </Placemark>
+  </Folder>
+</Document>
+</kml>

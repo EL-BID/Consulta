@@ -21,7 +21,7 @@ imoveis <- readRDS("coleta/dados/imoveis.RDS")
 imoveis_geo_osm <- readRDS("coleta/dados/imoveis_geo_osm.RDS")
 imoveis_geo_interno <- readRDS("coleta/dados/imoveis_geo_interno.RDS")
 unidades <- readRDS("coleta/dados/unidades.RDS")
-# unidades_saude <- readRDS("coleta/dados/unidades_saude.RDS")
+unidades_saude <- readRDS("coleta/dados/unidades_saude.RDS")
 limite_cidade <- readRDS("coleta/dados/limite_cidade.RDS")
 
 ## Preparação ####
@@ -210,8 +210,8 @@ assistencia_c_geo <- assistencia_c_geo$c_geo
 saude_c_geo <- 
   separa_geo(
     pessoas_saude,
-    unidades,
-    by = c("UnidadeReferencia" = "Name"))
+    unidades_saude,
+    by = c("CNES" = "CNES"))
 saude_s_geo <- saude_c_geo$s_geo
 saude_c_geo <- saude_c_geo$c_geo
 

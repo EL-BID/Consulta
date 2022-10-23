@@ -11,7 +11,6 @@ source("config.R")
 
 print("Agrupa dados das pessoas... Carregando informações...")
 
-pessoas_imobiliario <- readRDS("coleta/dados/pessoas_imobiliario.RDS")
 pessoas_educacao <- readRDS("coleta/dados/pessoas_educacao.RDS")
 pessoas_assistencia <- readRDS("coleta/dados/pessoas_assistencia.RDS")
 pessoas_saude <- readRDS("coleta/dados/pessoas_saude.RDS")
@@ -24,28 +23,24 @@ print("Agrupa dados das pessoas... Criando arquivo de pessoas...")
 pessoas_assistencia$acode <- 1:length(pessoas_assistencia$cpf)
 pessoas_educacao$ecode <- 1:length(pessoas_educacao$CPF)
 pessoas_fisica$fcode <- 1:length(pessoas_fisica$cpf)
-pessoas_imobiliario$icode <- 1:length(pessoas_imobiliario$cpf)
 pessoas_saude$scode <- 1:length(pessoas_saude$CPF)
 
 # Elimina caracteres não numéricos
 pessoas_assistencia$ncpf <- gsub("[^0-9]","",pessoas_assistencia$cpf)
 pessoas_educacao$ncpf <- gsub("[^0-9]","",pessoas_educacao$CPF)
 pessoas_fisica$ncpf <- gsub("[^0-9]","",pessoas_fisica$cpf)
-pessoas_imobiliario$ncpf <- gsub("[^0-9]","",pessoas_imobiliario$cpf)
 pessoas_saude$ncpf <- gsub("[^0-9]","",pessoas_saude$CPF)
 
 # Padroniza nomes
 pessoas_assistencia$NOME <- pessoas_assistencia$nome |> limpa_nomes()
 pessoas_educacao$NOME <- pessoas_educacao$nome |> limpa_nomes()
 pessoas_fisica$NOME <- pessoas_fisica$nome |> limpa_nomes()
-pessoas_imobiliario$NOME <- pessoas_imobiliario$nome |> limpa_nomes()
 pessoas_saude$NOME <- pessoas_saude$Nome |> limpa_nomes()
 
 # Junta todos os cpfs em uma única base
 pessoas <- c(pessoas_assistencia$ncpf,
                     pessoas_educacao$ncpf,
                     pessoas_fisica$ncpf,
-                    pessoas_imobiliario$ncpf,
                     pessoas_saude$ncpf) |> unique()|> as.data.frame()
 names(pessoas) <- "cpf"
 
@@ -71,9 +66,6 @@ pessoas$nome <-
   pessoas_fisica$NOME[match(pessoas$cpf,
                             pessoas_fisica$ncpf)]
 pessoas$nome[pessoas$nome |> is.na()] <- 
-  pessoas_imobiliario$NOME[match(pessoas$cpf[pessoas$nome |> is.na()],
-                                 pessoas_imobiliario$ncpf)]
-pessoas$nome[pessoas$nome |> is.na()] <- 
   pessoas_assistencia$NOME[match(pessoas$cpf[pessoas$nome |> is.na()],
                                 pessoas_assistencia$ncpf)]
 pessoas$nome[pessoas$nome |> is.na()] <- 
@@ -87,9 +79,6 @@ pessoas$nome[pessoas$nome |> is.na()] <-
 pessoas$fcode <- 
   pessoas_fisica$fcode[match(pessoas$cpf,
                             pessoas_fisica$ncpf)]
-pessoas$icode <- 
-  pessoas_imobiliario$icode[match(pessoas$cpf,
-                                    pessoas_imobiliario$ncpf)]
 pessoas$acode <- 
   pessoas_assistencia$acode[match(pessoas$cpf,
                                    pessoas_assistencia$ncpf)]
@@ -103,8 +92,6 @@ pessoas$ecode <-
 #vincula as tabelas com as pessoas
 pessoas_fisica$pcode <- 
   pessoas$pcode[match(pessoas_fisica$fcode, pessoas$fcode)]
-pessoas_imobiliario$pcode <- 
-  pessoas$pcode[match(pessoas_imobiliario$icode, pessoas$icode)]
 pessoas_assistencia$pcode <- 
   pessoas$pcode[match(pessoas_assistencia$acode, pessoas$acode)]
 pessoas_saude$pcode <- 
@@ -119,8 +106,8 @@ pessoas_fisica[pessoas_fisica$pcode |> is.na(),"pcode"] =
   ptemp$pcode <- 
   paste("f.",ptemp$fcode)
 ptemp$acode = ptemp$scode = ptemp$ecode = ptemp$icode <- NA
-ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","icode","acode","scode","ecode")]
-names(ptemp) <- c("pcode","cpf","nome","fcode","icode","acode","scode","ecode")
+ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","acode","scode","ecode")]
+names(ptemp) <- c("pcode","cpf","nome","fcode","acode","scode","ecode")
 pessoas <- rbind(pessoas,ptemp)
 
 ptemp <- 
@@ -129,8 +116,8 @@ pessoas_assistencia[pessoas_assistencia$pcode |> is.na(),"pcode"] =
   ptemp$pcode <- 
   paste("a.",ptemp$acode)
 ptemp$fcode = ptemp$scode = ptemp$ecode = ptemp$icode <- NA
-ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","icode","acode","scode","ecode")]
-names(ptemp) <- c("pcode","cpf","nome","fcode","icode","acode","scode","ecode")
+ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","acode","scode","ecode")]
+names(ptemp) <- c("pcode","cpf","nome","fcode","acode","scode","ecode")
 pessoas <- rbind(pessoas,ptemp)
 
 ptemp <- 
@@ -139,8 +126,8 @@ pessoas_saude[pessoas_saude$pcode |> is.na(),"pcode"] =
   ptemp$pcode <- 
   paste("s.",ptemp$scode)
 ptemp$acode = ptemp$fcode = ptemp$ecode = ptemp$icode <- NA
-ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","icode","acode","scode","ecode")]
-names(ptemp) <- c("pcode","cpf","nome","fcode","icode","acode","scode","ecode")
+ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","acode","scode","ecode")]
+names(ptemp) <- c("pcode","cpf","nome","fcode","acode","scode","ecode")
 pessoas <- rbind(pessoas,ptemp)
 
 ptemp <- 
@@ -149,8 +136,8 @@ pessoas_educacao[pessoas_educacao$pcode |> is.na(),"pcode"] =
   ptemp$pcode <- 
   paste("e.",ptemp$ecode)
 ptemp$acode = ptemp$scode = ptemp$fcode = ptemp$icode <- NA
-ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","icode","acode","scode","ecode")]
-names(ptemp) <- c("pcode","cpf","nome","fcode","icode","acode","scode","ecode")
+ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","acode","scode","ecode")]
+names(ptemp) <- c("pcode","cpf","nome","fcode","acode","scode","ecode")
 pessoas <- rbind(pessoas,ptemp)
 
 # Ordena as pessoas pelos nomes
@@ -158,18 +145,11 @@ pessoas <- pessoas[order(pessoas$nome),]
 
 print("Agrupa dados das pessoas... Salvando informações de pessoas...")
 
-saveRDS(pessoas,
-        file = "manipulacao/dados/pessoas.RDS")
-saveRDS(pessoas_saude,
-        file = "manipulacao/dados/pessoas_saude.RDS")
-saveRDS(pessoas_educacao,
-        file = "manipulacao/dados/pessoas_educacao.RDS")
-saveRDS(pessoas_fisica,
-        file = "manipulacao/dados/pessoas_fisica.RDS")
-saveRDS(pessoas_assistencia,
-        file = "manipulacao/dados/pessoas_assistencia.RDS")
-saveRDS(pessoas_imobiliario,
-        file = "manipulacao/dados/pessoas_imobiliario.RDS")
+pessoas |> saveRDS("manipulacao/dados/pessoas.RDS")
+pessoas_saude |> saveRDS("manipulacao/dados/pessoas_saude.RDS")
+pessoas_educacao |> saveRDS("manipulacao/dados/pessoas_educacao.RDS")
+pessoas_fisica |> saveRDS("manipulacao/dados/pessoas_fisica.RDS")
+pessoas_assistencia |> saveRDS("manipulacao/dados/pessoas_assistencia.RDS")
 
 # Separa as informações pessoais
 
