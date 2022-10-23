@@ -6,6 +6,7 @@ navbarPage(
   title = "Consulta",
 
   header = tagList(
+    tags$head(tags$link(rel = "shortcut icon", href = "./favicon.ico")),
     # Painel "carregando.." (para ocultar conteúdo enquanto carrega)
     conditionalPanel(
       "output.carregando != ''",
@@ -37,7 +38,13 @@ navbarPage(
     tags$style(type = "text/css", ".container-fluid {padding-left:0px;padding-right:0px;}"),
     tags$style(type = "text/css", ".navbar {margin-bottom: 0px;}"),
     tags$style(type = "text/css", ".container-fluid .navbar-header .navbar-brand {margin-left: 0px;}"),
-    
+    # estilos de cores para os clusters
+    tags$style(type = "text/css", ".marker-cluster-blue {background-color: rgba(0,0,255,0.25);}"),
+    tags$style(type = "text/css", ".marker-cluster-blue div {color: white; background-color: rgba(0,0,255,0.25);}"),
+    tags$style(type = "text/css", ".marker-cluster-red {background-color: rgba(255,0,0,0.25);}"),
+    tags$style(type = "text/css", ".marker-cluster-red div {color: white; background-color: rgba(255,0,0,0.25);}"),
+    tags$style(type = "text/css", ".dataTables_wrapper .dataTables_filter {float: left; padding-left: 5px; padding-top: 5px}"),
+    tags$style(type = "text/css", ".dataTables_wrapper .dataTables_filter input{width: 400px;}"),
     # Painel de consulta
     absolutePanel(
       top = 46,
@@ -93,6 +100,71 @@ navbarPage(
           style = "vertical-align: text-top;font-size: 14px;color: black;",
           icon = icon("times", verify_fa = FALSE)
         ) |> absolutePanel(top = 0, right = 5)
+      )
+    ),
+    
+    # legenda
+    conditionalPanel(
+      "output.mostrar_consulta != -1",
+      absolutePanel(
+        bottom = 30,
+        right = 75,
+        width = 200,
+        style = "z-index: 5000;
+      font-size: 10px;
+      z-index: 5;
+      pointer-events: none;
+      cursor: auto;
+      color: black;
+      border-radius:5px;
+      box-shadow: 0px 0px 15px 0px grey;
+      margin: 0 auto;
+      padding: 5px;
+      background-color: #FAFAF8;",
+        withTags(
+          table(
+            tr(
+              td(
+                img(src="./blue.jpg")
+              ),
+              td(
+                "Proprietário(a) e afins"
+              )
+            ),
+            tr(
+              td(
+                img(src="./red.jpg")
+              ),
+              td(
+                "Morador (proprietário(a) e afins)"
+              )
+            ),
+            tr(
+              td(
+                img(src="./green.jpg")
+              ),
+              td(
+                "Educação"
+              )
+            ),
+            tr(
+              td(
+                img(src="./orange.jpg")
+              ),
+              td(
+                "Saúde"
+              )
+            ),
+            tr(
+              td(
+                img(src="./cyan.jpg")
+              ),
+              td(
+                "Assistência social"
+              )
+            )
+          )
+        )
       )
     ),
     
@@ -263,7 +335,7 @@ navbarPage(
       absolutePanel(
         width = 650,
         # height = 200,
-        top = 53,
+        top = 125,
         left = 10,
         draggable = TRUE,
         style = "
@@ -316,5 +388,5 @@ navbarPage(
     downloadButton("download"),
     
   )  
-  # ) |> secure_app(enable_admin = TRUE, language = "pt-BR", theme = "simplex", tags_top = "Consulta")
-)
+  ) |> secure_app(enable_admin = TRUE, language = "pt-BR", theme = "simplex", tags_top = "Consulta")
+# )

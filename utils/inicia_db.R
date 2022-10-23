@@ -15,5 +15,6 @@ credentials <- data.frame(
 create_db(
   credentials_data = credentials,
   sqlite_path = "visualizacao/dados/database.sqlite",
-  passphrase = key_get("R-shinymanager-key", "consulta")
+  # passphrase = key_get("R-shinymanager-key", "consulta")
+  passphrase = chave
 )

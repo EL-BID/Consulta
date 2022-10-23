@@ -1,15 +1,16 @@
 function(input, output, session)  {
   
-  # ## Sistema de autenticação
-  # res_auth <- secure_server(
-  #   check_credentials = check_credentials(
-  #     "dados/database.sqlite",
-  #     passphrase = key_get("R-shinymanager-key", "consulta")
-  #   )
-  # )
-  # output$auth_output <- renderPrint({
-  #   reactiveValuesToList(res_auth)
-  # })
+  ## Sistema de autenticação
+  res_auth <- secure_server(
+    check_credentials = check_credentials(
+      "dados/database.sqlite",
+      # passphrase = key_get("R-shinymanager-key", "consulta")
+      passphrase = chave
+    )
+  )
+  output$auth_output <- renderPrint({
+    reactiveValuesToList(res_auth)
+  })
   
   # Debug
   # output$debug <- renderText(
@@ -50,7 +51,7 @@ function(input, output, session)  {
     choices = pessoas[,c("pcode","cpf","nome")],
     server = TRUE,
     options = list(
-      placeholder = "buscar...",
+      placeholder = "Buscar pessoa...",
       onInitialize = I('function() { this.setValue(""); }'),
       searchConjunction = 'and',
       searchField = c('cpf', 'nome'),
@@ -156,17 +157,17 @@ function(input, output, session)  {
                       mapa = proxy, pcode = pcode)
     newbbox$educacao <- 
       plotar_relacoes(educacao_c_geo,
-                      "orange",
+                      "green",
                       label = "unidadeReferencia",
                       mapa = proxy, pcode = pcode)
     newbbox$saude <- 
       plotar_relacoes(saude_c_geo,
-                      "green",
+                      "orange",
                       label = "UnidadeReferencia",
                       mapa = proxy, pcode = pcode)
     newbbox$assistencia <- 
       plotar_relacoes(assistencia_c_geo,
-                      "yellow",
+                      "cyan",
                       label = "unidadeReferencia",
                       mapa = proxy, pcode = pcode)
     
@@ -386,15 +387,15 @@ function(input, output, session)  {
             style = "margin: 5px;",
             tags$tr(
               tags$td(
-                width = "30%",
+                width = "33%",
                 style="text-align: center; font-weight: bold;",
-                "IPTU"),
+                "IPTU do Exercício"),
               tags$td(
-                width = "30%",
+                width = "33%",
                 style="text-align: center; font-weight: bold;",
-                "Dívida"),
+                "Dívida Ativa"),
               tags$td(
-                width = "40%",
+                width = "34%",
                 style="text-align: center; font-weight: bold;",
                 "Valor Venal")
             ),
@@ -585,21 +586,22 @@ function(input, output, session)  {
           updateWhenIdle = TRUE           
         )
       ) |>
-      # addCircleMarkers(
-      #   data = imoveis_c_geo,
-      #   weight = 1,
-      #   radius = 10,
-      #   fillOpacity = .5,
-      #   color = "red",
-      #   stroke = FALSE
-      # ) |>
       addPolygons(
         data = lotes,
         layerId = lotes$Name,
         weight = 1,
-        color = "red",
+        color = "#666",
         fillColor = "red",
         opacity = .5,
+        group = "lotes"
+      ) |>
+      addPolygons(
+        data = lotes_sem_dados,
+        weight = 1,
+        color = "#665",
+        fillColor = "grey",
+        opacity = .2,
+        options = pathOptions(interactive = FALSE),
         group = "lotes"
       ) |>
       # Define zoom inicial
@@ -607,8 +609,11 @@ function(input, output, session)  {
                 mybbox[2,1],
                 mybbox[1,2],
                 mybbox[2,2])
-  })|> bindCache(cache_ingles())  
+   })|> bindCache(cache_ingles())
+   #})
   
+  outputOptions(output, "map_confrontantes", suspendWhenHidden = FALSE) 
+
   # SISTEMA DE NAVEGAÇÃO POR ENDEREÇO
   # SelectsizeInput pelo lado do servidor por questão de performance
   updateSelectizeInput(
@@ -616,7 +621,7 @@ function(input, output, session)  {
     choices = lista_enderecos,
     server = TRUE,
     options = list(
-      placeholder = "pesquise...",
+      placeholder = "Pesquise endereço...",
       onInitialize = I('function() { this.setValue(""); }'),
       searchConjunction = 'and',
       searchField = c('endereco'),
@@ -648,6 +653,8 @@ function(input, output, session)  {
   observeEvent(input$map_confrontantes_shape_click,{
     req(input$map_confrontantes_shape_click)
     ponto <- input$map_confrontantes_shape_click
+    if (ponto$id |> length() == 0) return()
+    if (ponto$id |> is.na()) return()
     lote(ponto$id)
     mostrar_lista_relacionados(1)
   })
@@ -673,8 +680,9 @@ function(input, output, session)  {
     if (lote() |> is.null())
       "Aguarde..." |> as.data.frame()
     else {
-      dados_lista_relacionados()[c("nome", "complemento", "relacao")]
-      # (input$lista_relacionados_cell_clicked |> length() ==0) |> as.data.frame()
+      dados <- dados_lista_relacionados()[c("nome", "complemento", "relacao")]
+      names(dados) <- c("Nome", "Complemento", "Relação")
+      dados
     }
   },
   server = TRUE,
@@ -682,7 +690,10 @@ function(input, output, session)  {
   selection = "none",
   options = list(
     ordering = FALSE,
-    searching = FALSE,
+    searching = TRUE,
+    language = list(
+      search = "<i class='glyphicon glyphicon-search'></i>"
+    ),
     paging = TRUE,
     info = FALSE,
     lengthChange = FALSE)
@@ -722,7 +733,7 @@ function(input, output, session)  {
         colClasses = c("character"))
     
     # Agrega pcodes
-    lista_pessoas <- pessoas[pessoas$cpf %in% lista_cpfs[[1]],c("pcode", "cpf")]
+    lista_pessoas <- pessoas[pessoas$cpf %in% lista_pessoas[[1]],c("pcode", "cpf")]
     
     # Lista as informações desejadas
     inscricoes = dados = telefone = email = endereco <- NULL

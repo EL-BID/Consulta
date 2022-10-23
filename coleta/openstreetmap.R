@@ -10,17 +10,6 @@ library(rgdal)
 library(tidygeocoder)
 source("config.R")
 
-## Edificações ####
-# print("Carga de dados do OpenStreetMap... edificações...")
-# edificacoes <- opq("Vitória - ES") |>
-#   add_osm_features(c("\"building\"=\"yes\"")) |>
-#   osmdata_sf()
-# 
-# edificacoes <- edificacoes$osm_multipolygons |> as("Spatial")
-# 
-# saveRDS(edificacoes,
-#         "coleta/dados/edificacoes.RDS")
-
 # Limite da cidade
 print("Carga de dados do OpenStreetMap... limite da cidade...")
 limite_cidade <- opq(paste("Vitória","-",UF)) |>
@@ -69,7 +58,6 @@ coordinates(imoveis_geo_osm) <- c("long","lat")
 proj4string(imoveis_geo_osm) <- "+proj=longlat +datum=WGS84 +no_defs"
 
 # Grava
-saveRDS(imoveis_geo_osm,
-        file = "coleta/dados/imoveis_geo_osm.RDS")
+imoveis_geo_osm |> saveRDS("coleta/dados/imoveis_geo_osm.RDS")
 
 print("Fim da carga de dados do OpenStreetMap.")

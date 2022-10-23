@@ -16,14 +16,6 @@ lotes@data$Name <- 1:length(lotes@data$Name)
 
 # Cruzar lotes
 imoveis_p_lote <- imoveis_c_geo %over% lotes
-# Elimina imóveis que não estão nos lotes
-imoveis_p_lote <- 
-  imoveis_p_lote[imoveis_p_lote$Name |> is.na() |> not(),]
-
-# Elimina lotes que não possuem imóveis georreferenciados
-lista_lotes <- imoveis_p_lote$Name |> unique()
-lotes <- lotes[lista_lotes,]
-
 
 # Complementar informações
 imoveis_p_lote$pcode <- imoveis_c_geo$pcode
@@ -39,6 +31,15 @@ imoveis_p_lote <-
   imoveis_p_lote[order(imoveis_p_lote$complemento),
                  c("Name","pcode","nome","complemento","relacao")]
 
+# Elimina imóveis que não estão nos lotes
+imoveis_p_lote <- 
+  imoveis_p_lote[imoveis_p_lote$Name |> is.na() |> not(),]
+
+# Elimina lotes que não possuem imóveis georreferenciados
+lista_lotes <- imoveis_p_lote$Name |> unique()
+lotes_sem_dados <- lotes[-lista_lotes,]
+lotes <- lotes[lista_lotes,]
 
 lotes |> saveRDS("manipulacao/dados/lotes.RDS")
+lotes_sem_dados |> saveRDS("manipulacao/dados/lotes_sem_dados.RDS")
 imoveis_p_lote |> saveRDS("manipulacao/dados/imoveis_p_lote.RDS")

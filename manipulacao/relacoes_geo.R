@@ -3,6 +3,8 @@ print("Georreferencia as relações com o munícipe...")
 library(dplyr)
 library(raster)
 library(magrittr)
+library(stringr)
+library(splitstackshape)
 library(sp)
 source("manipulacao/library.R")
 source("config.R")
@@ -66,7 +68,110 @@ imoveis_c_geo <- imoveis_c_geo |>
 imoveis_geo_interno@coords <- imoveis_geo_interno@coords[,c(1,2)]
 imoveis_geo <- rbind(imoveis_geo_interno, imoveis_geo_osm)
 
-# Identificação das residencias
+### Identificação das residencias #####
+# Isso aqui identifica os proprietários (e afins) que moram em seus imóveis
+endereco <- NULL
+
+pessoas_fisica$LOGRADOURO <- pessoas_fisica$logradouro |> limpa_nome_rua()
+pessoas_fisica$endereco <- paste0(pessoas_fisica$tipoLogradouro, " ",
+                                  pessoas_fisica$LOGRADOURO,"#",
+                                  pessoas_fisica$numero,"|",
+                                  pessoas_fisica$complemento)
+pessoas_fisica$endereco[pessoas_fisica$LOGRADOURO |> is.na()] <- NA
+endereco <- endereco |> junta_endereco(pessoas_fisica, "dt_fisica")
+
+pessoas_educacao$LOGRADOURO <- pessoas_educacao$logradouro |> limpa_nome_rua()
+pessoas_educacao$endereco <- paste0(pessoas_educacao$LOGRADOURO,"#",
+                                    pessoas_educacao$numero,"|",
+                                    pessoas_educacao$complemento)
+pessoas_educacao$endereco[pessoas_educacao$LOGRADOURO |> is.na()] <- NA
+endereco <- endereco |> junta_endereco(pessoas_educacao, "dt_educacao")
+
+pessoas_saude$LOGRADOURO <- pessoas_saude$Logradouro |> limpa_nome_rua()
+pessoas_saude$endereco <- paste0(pessoas_saude$tipoLogradouro, " ",
+                                 pessoas_saude$LOGRADOURO,"#",
+                                 pessoas_saude$numero,"|",
+                                 pessoas_saude$complemento)
+pessoas_saude$endereco[pessoas_saude$LOGRADOURO |> is.na()] <- NA
+endereco <- endereco |> junta_endereco(pessoas_saude, "dt_saude")
+
+pessoas_assistencia$LOGRADOURO <- pessoas_assistencia$logradouro |> limpa_nome_rua()
+pessoas_assistencia$endereco <- paste0(pessoas_assistencia$LOGRADOURO,"#",
+                                       pessoas_assistencia$numero,"|",
+                                       pessoas_assistencia$complemento)
+pessoas_assistencia$endereco[pessoas_assistencia$LOGRADOURO |> is.na()] <- NA
+endereco <- endereco |> junta_endereco(pessoas_assistencia, "dt_assistencia")
+
+endereco <- endereco[,c(1,2)] |> cSplit("valor","#")
+endereco <- endereco[endereco$valor_3 |> is.na(),]
+endereco <- endereco[,c(1:3)] |> cSplit("valor_2","|")
+endereco <- endereco[endereco$valor_2_3 |> is.na(),c(1:4)]
+names(endereco) <- c("pcode","rua","num","complemento")
+endereco$ruanum <- paste(endereco$rua, endereco$num)
+endereco$ruanumcomplemento <- paste(endereco$rua, endereco$num, endereco$complemento)
+
+base <- imoveis_c_geo
+base$nomeLogradouro <- base$nomeLogradouro |> limpa_nome_rua()
+base$rua <- paste(base$tipoLogradouro,base$nomeLogradouro)
+base$ruanum <- paste(base$tipoLogradouro,base$nomeLogradouro,base$numero)
+base$ruanumcomplemento <- paste(base$tipoLogradouro,base$nomeLogradouro,base$numero,base$complemento)
+
+# Se só possui um imóvel na rua e essa rua é registrada como endereço, esse
+# imóvei é a residência
+unico_imovel <- base |>
+  group_by(pcode, rua) |>
+  summarise(n = n(), .groups = "drop") |>
+  filter(n == 1L)
+
+unico_imovel <-  unico_imovel |> inner_join(endereco)
+unico_imovel <- unico_imovel |> left_join(base, by = c("pcode", "rua"))
+unico_imovel$indice <- paste(unico_imovel$pcode,".",unico_imovel$inscricao)
+
+imoveis_c_geo$indice <- paste(imoveis_c_geo$pcode,".",imoveis_c_geo$inscricao)
+imoveis_c_geo$residente <- FALSE
+imoveis_c_geo$residente[
+  (imoveis_c_geo$indice %in% unico_imovel$indice)] <- TRUE
+
+# Se só possui um imóvel na rua e número e essa rua e num é registrada como 
+# endereço, esse imóvei é a residência
+unico_imovel <- base |>
+  group_by(pcode, ruanum) |>
+  summarise(n = n(), .groups = "drop") |>
+  filter(n == 1L)
+
+unico_imovel <-  unico_imovel |> inner_join(endereco)
+unico_imovel <- unico_imovel |> left_join(base, by = c("pcode", "rua"))
+unico_imovel$indice <- paste(unico_imovel$pcode,".",unico_imovel$inscricao)
+
+imoveis_c_geo$residente[
+  imoveis_c_geo$indice %in% unico_imovel$indice] <- TRUE
+
+# Se possui + de um imóvel, é preciso verificar se há semelhança no complemento
+multiplo_imovel <- base |>
+  group_by(pcode, ruanumcomplemento) |>
+  summarise(n = n(), .groups = "drop") |>
+  filter(n > 1L)
+
+multiplo_imovel <-  multiplo_imovel |> inner_join(endereco)
+multiplo_imovel <- multiplo_imovel |> left_join(base, by = c("pcode", "ruanum"))
+multiplo_imovel$complemento.x[multiplo_imovel$complemento.x |> is.na()]  <- ""
+multiplo_imovel$complemento.y[multiplo_imovel$complemento.y |> is.na()]  <- ""
+multiplo_imovel$residente <- FALSE
+multiplo_imovel$residente <-
+  multiplo_imovel$complemento.x == multiplo_imovel$complemento.y
+
+multiplo_imovel = nao_deu <- multiplo_imovel[multiplo_imovel$residente,]
+
+nao_deu <- nao_deu |>
+  group_by(pcode) |>
+  summarise(n = n(), .groups = "drop") |>
+  filter(n > 1L)
+
+multiplo_imovel <- multiplo_imovel[(multiplo_imovel$pcode %in% nao_deu$pcode) |> not(),]
+multiplo_imovel$indice <- paste(multiplo_imovel$pcode,".",multiplo_imovel$inscricao)
+
+imoveis_c_geo$residente[
+  imoveis_c_geo$indice %in% multiplo_imovel$indice] <- TRUE
 
 ## Assistência
 # Tentativa de melhorar os nomes dos CRAS
@@ -120,7 +225,6 @@ imoveis_s_geo <- imoveis_c_geo$s_geo
 imoveis_c_geo <- imoveis_c_geo$c_geo
 
 # Lista de endereços para sistema de navegação
-
 lista1 <- 
   paste0(imoveis_c_geo@data$tipoLogradouro, " ",
          imoveis_c_geo@data$nomeLogradouro) |> 
@@ -139,70 +243,6 @@ names(lista2) <- "endereco"
 lista_enderecos <- rbind(lista1,lista2)
 lista_enderecos$indice <- 1:length(lista_enderecos$endereco)
 lista_enderecos <- lista_enderecos[order(lista_enderecos$endereco),]
-
-# Residências
-
-endereco <- NULL
-
-pessoas_fisica$LOGRADOURO <- pessoas_fisica$logradouro |> limpa_nome_rua()
-pessoas_fisica$endereco <- paste0(pessoas_fisica$tipoLogradouro, " ",
-                                  pessoas_fisica$LOGRADOURO,"#",
-                                  pessoas_fisica$numero,"|",
-                                  pessoas_fisica$complemento)
-pessoas_fisica$endereco[pessoas_fisica$LOGRADOURO |> is.na()] <- NA
-endereco <- endereco |> junta_endereco(pessoas_fisica, "dt_fisica")
-
-pessoas_educacao$LOGRADOURO <- pessoas_educacao$logradouro |> limpa_nome_rua()
-pessoas_educacao$endereco <- paste0(pessoas_educacao$LOGRADOURO,"#",
-                                    pessoas_educacao$numero,"|",
-                                    pessoas_educacao$complemento)
-pessoas_educacao$endereco[pessoas_educacao$LOGRADOURO |> is.na()] <- NA
-endereco <- endereco |> junta_endereco(pessoas_educacao, "dt_educacao")
-
-pessoas_saude$LOGRADOURO <- pessoas_saude$Logradouro |> limpa_nome_rua()
-pessoas_saude$endereco <- paste0(pessoas_saude$tipoLogradouro, " ",
-                                 pessoas_saude$LOGRADOURO,"#",
-                                 pessoas_saude$numero,"|",
-                                 pessoas_saude$complemento)
-pessoas_saude$endereco[pessoas_saude$LOGRADOURO |> is.na()] <- NA
-endereco <- endereco |> junta_endereco(pessoas_saude, "dt_saude")
-
-pessoas_assistencia$LOGRADOURO <- pessoas_assistencia$logradouro |> limpa_nome_rua()
-pessoas_assistencia$endereco <- paste0(pessoas_assistencia$LOGRADOURO,"#",
-                                       pessoas_assistencia$numero,"|",
-                                       pessoas_assistencia$complemento)
-pessoas_assistencia$endereco[pessoas_assistencia$LOGRADOURO |> is.na()] <- NA
-endereco <- endereco |> junta_endereco(pessoas_assistencia, "dt_assistencia")
-
-detalhado <- endereco[,c(1,2)] |> cSplit("valor","#")
-detalhado <- detalhado[detalhado$valor_3 |> is.na(),]
-detalhado <- detalhado[,c(1:3)] |> cSplit("valor_2","|")
-detalhado <- detalhado[detalhado$valor_2_3 |> is.na(),c(1:4)]
-names(detalhado) <- c("pcode","rua","num","complemento")
-
-
-
-base <- imoveis_c_geo@data
-base$nomeLogradouro
-base$rua <- paste(base$tipoLogradouro,base$nomeLogradouro)
-
-unico_imovel <- base |>
-  group_by(pcode, rua) |>
-  summarise(n = n(), .groups = "drop") |>
-  filter(n == 1L)
-  
-teste <-  inner_join(unico_imovel,detalhado)
-  
-teste2 <- teste |> left_join(base, by = c("pcode", "rua"))
-
-teste2$indice <- paste(teste2$pcode,".",teste2$inscricao)
-
-imoveis_c_geo@data$indice <- paste(imoveis_c_geo@data$pcode,".",imoveis_c_geo@data$inscricao)
-
-imoveis_s_geo$residente <- FALSE
-imoveis_c_geo@data$residente <- FALSE
-imoveis_c_geo@data$residente[
-  (imoveis_c_geo@data$indice %in% teste2$indice) |> which()] <- TRUE
 
 # Grava
 saveRDS(assistencia_c_geo, 

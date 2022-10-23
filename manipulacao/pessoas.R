@@ -112,6 +112,47 @@ pessoas_saude$pcode <-
 pessoas_educacao$pcode <- 
   pessoas$pcode[match(pessoas_educacao$ecode, pessoas$ecode)]
 
+# Juntar todas as outras pessoas...
+ptemp <- 
+  pessoas_fisica[pessoas_fisica$pcode |> is.na(),c("fcode", "ncpf", "NOME")]
+pessoas_fisica[pessoas_fisica$pcode |> is.na(),"pcode"] = 
+  ptemp$pcode <- 
+  paste("f.",ptemp$fcode)
+ptemp$acode = ptemp$scode = ptemp$ecode = ptemp$icode <- NA
+ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","icode","acode","scode","ecode")]
+names(ptemp) <- c("pcode","cpf","nome","fcode","icode","acode","scode","ecode")
+pessoas <- rbind(pessoas,ptemp)
+
+ptemp <- 
+  pessoas_assistencia[pessoas_assistencia$pcode |> is.na(),c("acode", "ncpf", "NOME")]
+pessoas_assistencia[pessoas_assistencia$pcode |> is.na(),"pcode"] = 
+  ptemp$pcode <- 
+  paste("a.",ptemp$acode)
+ptemp$fcode = ptemp$scode = ptemp$ecode = ptemp$icode <- NA
+ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","icode","acode","scode","ecode")]
+names(ptemp) <- c("pcode","cpf","nome","fcode","icode","acode","scode","ecode")
+pessoas <- rbind(pessoas,ptemp)
+
+ptemp <- 
+  pessoas_saude[pessoas_saude$pcode |> is.na(),c("scode", "ncpf", "NOME")]
+pessoas_saude[pessoas_saude$pcode |> is.na(),"pcode"] = 
+  ptemp$pcode <- 
+  paste("s.",ptemp$scode)
+ptemp$acode = ptemp$fcode = ptemp$ecode = ptemp$icode <- NA
+ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","icode","acode","scode","ecode")]
+names(ptemp) <- c("pcode","cpf","nome","fcode","icode","acode","scode","ecode")
+pessoas <- rbind(pessoas,ptemp)
+
+ptemp <- 
+  pessoas_educacao[pessoas_educacao$pcode |> is.na(),c("ecode", "ncpf", "NOME")]
+pessoas_educacao[pessoas_educacao$pcode |> is.na(),"pcode"] = 
+  ptemp$pcode <- 
+  paste("e.",ptemp$ecode)
+ptemp$acode = ptemp$scode = ptemp$fcode = ptemp$icode <- NA
+ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","icode","acode","scode","ecode")]
+names(ptemp) <- c("pcode","cpf","nome","fcode","icode","acode","scode","ecode")
+pessoas <- rbind(pessoas,ptemp)
+
 # Ordena as pessoas pelos nomes
 pessoas <- pessoas[order(pessoas$nome),]
 
@@ -234,7 +275,7 @@ endereco <- NULL
 pessoas_fisica$LOGRADOURO <- pessoas_fisica$logradouro |> limpa_nome_rua()
 pessoas_fisica$endereco <- paste0(pessoas_fisica$tipoLogradouro, " ",
                                   pessoas_fisica$LOGRADOURO,", N ",
-                                  pessoas_fisica$numero," ",
+                                  pessoas_fisica$numero,"#",
                                   pessoas_fisica$complemento,", ",
                                   pessoas_fisica$bairro,", ",
                                   pessoas_fisica$cidade," - ",
@@ -245,7 +286,7 @@ endereco <- endereco |> junta_endereco(pessoas_fisica, "dt_fisica")
 
 pessoas_educacao$LOGRADOURO <- pessoas_educacao$logradouro |> limpa_nome_rua()
 pessoas_educacao$endereco <- paste0(pessoas_educacao$LOGRADOURO,", N ",
-                                    pessoas_educacao$numero," ",
+                                    pessoas_educacao$numero,"#",
                                     pessoas_educacao$complemento,", ",
                                     pessoas_educacao$bairro,", ",
                                     pessoas_educacao$localidade," - ",
@@ -257,7 +298,7 @@ endereco <- endereco |> junta_endereco(pessoas_educacao, "dt_educacao")
 pessoas_saude$LOGRADOURO <- pessoas_saude$Logradouro |> limpa_nome_rua()
 pessoas_saude$endereco <- paste0(pessoas_saude$tipoLogradouro, " ",
                                   pessoas_saude$LOGRADOURO,", N ",
-                                  pessoas_saude$numero," ",
+                                  pessoas_saude$numero,"#",
                                   pessoas_saude$complemento,", ",
                                   pessoas_saude$bairro,", ",
                                   pessoas_saude$cidade," - ",
@@ -268,7 +309,7 @@ endereco <- endereco |> junta_endereco(pessoas_saude, "dt_saude")
 
 pessoas_assistencia$LOGRADOURO <- pessoas_assistencia$logradouro |> limpa_nome_rua()
 pessoas_assistencia$endereco <- paste0(pessoas_assistencia$LOGRADOURO,", N ",
-                                 pessoas_assistencia$numero," ",
+                                 pessoas_assistencia$numero,"#",
                                  pessoas_assistencia$complemento,", ",
                                  pessoas_assistencia$bairro,", ",
                                  pessoas_assistencia$cidade," - ",

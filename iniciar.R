@@ -13,8 +13,8 @@ source("config.R", encoding = "UTF-8")
 source("utils/pacotes.R")
 
 ## Autenticação para a visualização ####
-# source("utils/cria_chave_db.R")
-# source("utils/inicia_db.R")
+source("utils/cria_chave_db.R")
+source("utils/inicia_db.R")
 
 ## carga e manipulação dos dados ####
 source("utils/carga.R")

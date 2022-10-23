@@ -7,9 +7,12 @@ library(DT)
 library(shinymanager)
 library(keyring)
 library(dplyr)
+library(tidyr)
 library(xlsx)
 library(cachem)
 library(sp)
+library(splitstackshape)
+
 
 # Carrega dados
 pessoas <- readRDS("dados/pessoas.RDS")
@@ -23,12 +26,14 @@ educacao_s_geo <- readRDS("dados/educacao_s_geo.RDS")
 saude_s_geo <- readRDS("dados/saude_s_geo.RDS")
 assistencia_s_geo <- readRDS("dados/assistencia_s_geo.RDS")
 lotes <- readRDS("dados/lotes.RDS")
+lotes_sem_dados <- readRDS("dados/lotes_sem_dados.RDS")
 imoveis_p_lote <- readRDS("dados/imoveis_p_lote.RDS")
 lista_enderecos <- readRDS("dados/lista_enderecos.RDS")
 mybbox <- imoveis_c_geo@bbox
 
+chave <- readRDS("dados/chave.RDS")
 
-shinyOptions(cache = cache_disk("dados/cache/")) 
+shinyOptions(cache = cache_disk("dados/cache/"))
 
 # definições de estilos:
 # botão de ferramenta
@@ -94,6 +99,9 @@ info_cabecalho <- withTags(table(
 ))
 
 
+
+
+
 plotar_relacoes <- function(relacao, cor, label, id = NULL, mapa, pcode) {
   
   dados <- relacao[relacao@data$pcode == pcode,]
@@ -112,6 +120,29 @@ plotar_relacoes <- function(relacao, cor, label, id = NULL, mapa, pcode) {
   else
     label <- dados@data[,label] |> lapply(HTML)
   
+  if (cor == "blue"){
+    icones <- "function (cluster) {    
+    var childCount = cluster.getChildCount(); 
+    var c = ' marker-cluster-blue';  
+    return new L.DivIcon({ html: '<div><span>' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+
+  }"
+  } else if (cor == "red"){
+    icones <- "function (cluster) {    
+    var childCount = cluster.getChildCount(); 
+    var c = ' marker-cluster-red';  
+    return new L.DivIcon({ html: '<div><span>' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+
+  }"
+  } else {
+    icones <- "function (cluster) {    
+    var childCount = cluster.getChildCount(); 
+    var c = ' marker-cluster-small';  
+    return new L.DivIcon({ html: '<div><span>' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+
+  }"
+  }
+
   #Plota no mapa
   mapa |>
     addCircleMarkers(
@@ -121,6 +152,7 @@ plotar_relacoes <- function(relacao, cor, label, id = NULL, mapa, pcode) {
       radius = 10,
       weight = 1,
       label = label,
+      clusterOptions = markerClusterOptions(iconCreateFunction=JS(icones)),
       group = "municipe"
     )
   
