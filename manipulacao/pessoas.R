@@ -9,39 +9,45 @@ library(tidyr)
 source("manipulacao/library.R")
 source("config.R")
 
-print("Agrupa dados das pessoas... Carregando informações...")
+# Carrega dicionário de dados, apenas com dados de bases de pessoas
+campos <- read.csv2("dados/dicionario.csv", row.names = 1) |>
+  as.data.frame()
+campos <- campos[,campos["cpf",] != ""]
+campos[campos == ""] <- NA
 
-pessoas_educacao <- readRDS("coleta/dados/pessoas_educacao.RDS")
-pessoas_assistencia <- readRDS("coleta/dados/pessoas_assistencia.RDS")
-pessoas_saude <- readRDS("coleta/dados/pessoas_saude.RDS")
-pessoas_fisica <- readRDS("coleta/dados/pessoas_fisica.RDS")
-pessoas_vinculo <- readRDS("coleta/dados/pessoas_vinculo.RDS")
+print("Agrupa dados das pessoas... Carregando informações...")
+bases <- NULL
+for (base in colnames(campos)) {
+  print(paste("Agrupa dados das pessoas... Carregando informações...", base))
+  bases[[base]] <- 
+    readRDS(paste0("coleta/dados/",campos["tabela",base],".RDS"))
+}
 
 print("Agrupa dados das pessoas... Criando arquivo de pessoas...")
 
-# Cria códigos próprios para cada lançamento na tabela
-pessoas_assistencia$acode <- 1:length(pessoas_assistencia$cpf)
-pessoas_educacao$ecode <- 1:length(pessoas_educacao$CPF)
-pessoas_fisica$fcode <- 1:length(pessoas_fisica$cpf)
-pessoas_saude$scode <- 1:length(pessoas_saude$CPF)
+pessoas <- NULL
 
-# Elimina caracteres não numéricos
-pessoas_assistencia$ncpf <- gsub("[^0-9]","",pessoas_assistencia$cpf)
-pessoas_educacao$ncpf <- gsub("[^0-9]","",pessoas_educacao$CPF)
-pessoas_fisica$ncpf <- gsub("[^0-9]","",pessoas_fisica$cpf)
-pessoas_saude$ncpf <- gsub("[^0-9]","",pessoas_saude$CPF)
+for (base in colnames(campos)) {
+  # Cria códigos próprios para cada lançamento na tabela e elimina 
+  # caracteres não numéricos do CPF
+  bases[[base]][[campos["code",base]]] <- 
+    1:length(bases[[base]][[campos["cpf",base]]])
+  bases[[base]]$ncpf <- 
+    gsub("[^0-9]","",bases[[base]][[campos["cpf",base]]])
 
-# Padroniza nomes
-pessoas_assistencia$NOME <- pessoas_assistencia$nome |> limpa_nomes()
-pessoas_educacao$NOME <- pessoas_educacao$nome |> limpa_nomes()
-pessoas_fisica$NOME <- pessoas_fisica$nome |> limpa_nomes()
-pessoas_saude$NOME <- pessoas_saude$Nome |> limpa_nomes()
+  # Padroniza nomes
+  print(paste("Agrupa dados das pessoas... Criando arquivo de pessoas...",
+              "Padronizando nomes...",base))
+  bases[[base]]$NOME <- 
+    bases[[base]][[campos["nome",base]]] |> limpa_nomes()
 
-# Junta todos os cpfs em uma única base
-pessoas <- c(pessoas_assistencia$ncpf,
-                    pessoas_educacao$ncpf,
-                    pessoas_fisica$ncpf,
-                    pessoas_saude$ncpf) |> unique()|> as.data.frame()
+  # Junta todos os cpfs em uma única base
+  pessoas <- 
+    c(pessoas, 
+      bases[[base]]$ncpf)
+}
+
+pessoas <- pessoas |> unique()|> as.data.frame()
 names(pessoas) <- "cpf"
 
 # Elimina todos os documentos que não possuem tamanho de cpf
@@ -53,250 +59,155 @@ pessoas$pcode <- lapply(pessoas$cpf, diffchar)
 pessoas <- pessoas |> subset(pcode > 1)
 
 # Elimina cpfs inválidos
+print(paste("Agrupa dados das pessoas... Criando arquivo de pessoas...",
+            "Validando CPFs..."))
 pessoas$pcode <- 
   sapply(pessoas$cpf, cpf_validar)
 pessoas <- pessoas |> subset(pcode)
+print(paste("Agrupa dados das pessoas... Criando arquivo de pessoas...",
+            "Validando CPFs... FIM"))
 
 # Cria código único para tabela pessoas
 pessoas <- pessoas[,c(2,1)]
 pessoas$pcode <- 1:length(pessoas$pcode)
 
-# Preencher nome por ordem de preferência
-pessoas$nome <- 
-  pessoas_fisica$NOME[match(pessoas$cpf,
-                            pessoas_fisica$ncpf)]
-pessoas$nome[pessoas$nome |> is.na()] <- 
-  pessoas_assistencia$NOME[match(pessoas$cpf[pessoas$nome |> is.na()],
-                                pessoas_assistencia$ncpf)]
-pessoas$nome[pessoas$nome |> is.na()] <- 
-  pessoas_saude$NOME[match(pessoas$cpf[pessoas$nome |> is.na()],
-                           pessoas_saude$ncpf)]
-pessoas$nome[pessoas$nome |> is.na()] <- 
-  pessoas_educacao$NOME[match(pessoas$cpf[pessoas$nome |> is.na()],
-                              pessoas_educacao$ncpf)]
+# Vincular bases
+pessoas$nome <- NA
+for (base in colnames(campos)) {
+  # Preencher nomes
+  pessoas$nome[pessoas$nome |> is.na()] <- 
+    bases[[base]]$NOME[match(pessoas$cpf[pessoas$nome |> is.na()],
+                                    bases[[base]]$ncpf)]
 
-# Vincula as pessoas com as tabelas anteriores
-pessoas$fcode <- 
-  pessoas_fisica$fcode[match(pessoas$cpf,
-                            pessoas_fisica$ncpf)]
-pessoas$acode <- 
-  pessoas_assistencia$acode[match(pessoas$cpf,
-                                   pessoas_assistencia$ncpf)]
-pessoas$scode <- 
-  pessoas_saude$scode[match(pessoas$cpf,
-                              pessoas_saude$ncpf)]
-pessoas$ecode <- 
-  pessoas_educacao$ecode[match(pessoas$cpf,
-                                 pessoas_educacao$ncpf)]
+  # Vincula as pessoas com as bases anteriores
+  pessoas[[campos["code",base]]] <- 
+    bases[[base]][[campos["code",base]]][match(pessoas$cpf,
+                                                      bases[[base]]$ncpf)]
+  #vincula as bases com as pessoas
+  bases[[base]]$pcode <- 
+    pessoas$pcode[match(bases[[base]][[campos["code",base]]], 
+                        pessoas[[campos["code",base]]])]
+}
 
-#vincula as tabelas com as pessoas
-pessoas_fisica$pcode <- 
-  pessoas$pcode[match(pessoas_fisica$fcode, pessoas$fcode)]
-pessoas_assistencia$pcode <- 
-  pessoas$pcode[match(pessoas_assistencia$acode, pessoas$acode)]
-pessoas_saude$pcode <- 
-  pessoas$pcode[match(pessoas_saude$scode, pessoas$scode)]
-pessoas_educacao$pcode <- 
-  pessoas$pcode[match(pessoas_educacao$ecode, pessoas$ecode)]
-
-# Juntar todas as outras pessoas...
-ptemp <- 
-  pessoas_fisica[pessoas_fisica$pcode |> is.na(),c("fcode", "ncpf", "NOME")]
-pessoas_fisica[pessoas_fisica$pcode |> is.na(),"pcode"] = 
-  ptemp$pcode <- 
-  paste("f.",ptemp$fcode)
-ptemp$acode = ptemp$scode = ptemp$ecode = ptemp$icode <- NA
-ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","acode","scode","ecode")]
-names(ptemp) <- c("pcode","cpf","nome","fcode","acode","scode","ecode")
-pessoas <- rbind(pessoas,ptemp)
-
-ptemp <- 
-  pessoas_assistencia[pessoas_assistencia$pcode |> is.na(),c("acode", "ncpf", "NOME")]
-pessoas_assistencia[pessoas_assistencia$pcode |> is.na(),"pcode"] = 
-  ptemp$pcode <- 
-  paste("a.",ptemp$acode)
-ptemp$fcode = ptemp$scode = ptemp$ecode = ptemp$icode <- NA
-ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","acode","scode","ecode")]
-names(ptemp) <- c("pcode","cpf","nome","fcode","acode","scode","ecode")
-pessoas <- rbind(pessoas,ptemp)
-
-ptemp <- 
-  pessoas_saude[pessoas_saude$pcode |> is.na(),c("scode", "ncpf", "NOME")]
-pessoas_saude[pessoas_saude$pcode |> is.na(),"pcode"] = 
-  ptemp$pcode <- 
-  paste("s.",ptemp$scode)
-ptemp$acode = ptemp$fcode = ptemp$ecode = ptemp$icode <- NA
-ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","acode","scode","ecode")]
-names(ptemp) <- c("pcode","cpf","nome","fcode","acode","scode","ecode")
-pessoas <- rbind(pessoas,ptemp)
-
-ptemp <- 
-  pessoas_educacao[pessoas_educacao$pcode |> is.na(),c("ecode", "ncpf", "NOME")]
-pessoas_educacao[pessoas_educacao$pcode |> is.na(),"pcode"] = 
-  ptemp$pcode <- 
-  paste("e.",ptemp$ecode)
-ptemp$acode = ptemp$scode = ptemp$fcode = ptemp$icode <- NA
-ptemp <- ptemp[,c("pcode","ncpf","NOME","fcode","acode","scode","ecode")]
-names(ptemp) <- c("pcode","cpf","nome","fcode","acode","scode","ecode")
-pessoas <- rbind(pessoas,ptemp)
+# Incluir todas as pessoas sem CPF
+for (base in colnames(campos)) {
+  # Juntar todas as outras pessoas que não possuem cpf adequado...
+  # O cadastro dessas pessoas será cruzado posteriormente no 
+  # módulo complementar_pessoas.R
+  ptemp <- 
+    bases[[base]][bases[[base]]$pcode |> is.na(),
+                         c(campos["code",base], "ncpf", "NOME")]
+  bases[[base]][bases[[base]]$pcode |> is.na(),"pcode"] = 
+    ptemp$pcode <- 
+    paste0(base,".",ptemp[[campos["code",base]]])
+  
+  for (code in campos["code",names(campos) != base]) {
+    ptemp[[code]] <- NA
+  }
+  
+  ptemp <- ptemp[,c("pcode", "ncpf", "NOME", campos["code",] |> as.character())]
+  names(ptemp) <- names(pessoas)
+  pessoas <- rbind(pessoas,ptemp)
+}
 
 # Ordena as pessoas pelos nomes
+print(paste("Agrupa dados das pessoas... Criando arquivo de pessoas... Ordenando..."))
 pessoas <- pessoas[order(pessoas$nome),]
 
 print("Agrupa dados das pessoas... Salvando informações de pessoas...")
 
 pessoas |> saveRDS("manipulacao/dados/pessoas.RDS")
-pessoas_saude |> saveRDS("manipulacao/dados/pessoas_saude.RDS")
-pessoas_educacao |> saveRDS("manipulacao/dados/pessoas_educacao.RDS")
-pessoas_fisica |> saveRDS("manipulacao/dados/pessoas_fisica.RDS")
-pessoas_assistencia |> saveRDS("manipulacao/dados/pessoas_assistencia.RDS")
+for (base in names(campos)) {
+  bases[[base]] |> saveRDS(paste0("manipulacao/dados/",campos["tabela",base],".RDS"))
+}
 
 # Separa as informações pessoais
-
-# Ajusta as datas de atualização da saúde e assistência
-pessoas_saude$dataAtualizacao[pessoas_saude$dataAtualizacao |> is.na()] <- 
-  pessoas_saude$dataInclusao[pessoas_saude$dataAtualizacao |> is.na()]
-pessoas_assistencia$dataAtualizacao[pessoas_assistencia$dataAtualizacao |> is.na()] <- 
-  pessoas_assistencia$dataInclusao[pessoas_assistencia$dataAtualizacao |> is.na()]
-
-# Padroniza o formato das datas
-pessoas_fisica$dataAtualizacao <- pessoas_fisica$dataAtualizacao |> 
-  as.Date("%d/%m/%Y") |> format("%d/%m/%Y")
-pessoas_educacao$dataAtualizacao <- pessoas_educacao$dataAtualizacao |> 
-  as.Date("%d/%m/%Y") |> format("%d/%m/%Y")
-pessoas_saude$dataAtualizacao <- pessoas_saude$dataAtualizacao |>
-  as.Date("%d/%m/%Y") |> format("%d/%m/%Y")
-pessoas_assistencia$dataAtualizacao <- pessoas_assistencia$dataAtualizacao |> 
-  as.Date("%d/%m/%Y") |> format("%d/%m/%Y")
-
-print("Agrupa dados das pessoas... Coletando nomes...")
-
-# nomes
+print("Agrupa dados das pessoas...")
 nome <- NULL
-nome <- nome |> junta_nome(pessoas_fisica, "dt_fisica")
-nome <- nome |> junta_nome(pessoas_educacao, "dt_educacao")
-nome <- nome |> junta_nome(pessoas_saude, "dt_saude")
-nome <- nome |> junta_nome(pessoas_assistencia, "dt_assistencia")
-nome$campo <- "Nome"
+email <- NULL
+telefone <- NULL
+mae <- NULL
+nascimento <- NULL
+identidade <- NULL
+ctps <- NULL
+endereco <- NULL
+
+for (base in names(campos)) {
+  # Ajusta as datas de atualização das bases que possuem data de inclusão
+  if (campos["inclusao",base] |> is.na() |> not()) {
+    bases[[base]][[campos["atualizacao",base]]][
+      bases[[base]][[campos["atualizacao",base]]] |> is.na()] <- 
+      bases[[base]][[campos["inclusao",base]]][
+        bases[[base]][[campos["atualizacao",base]]] |> is.na()]
+  }
+  
+  # Padroniza o formato das datas
+  bases[[base]][[campos["atualizacao",base]]] |>
+    as.Date("%d/%m/%Y") |> format("%d/%m/%Y")  
+
+  print(paste("Agrupa dados das pessoas... Coletando nomes...",base))
+  nome <- nome |> 
+    junta_nome(bases[[base]], paste0("dt_",base), "NOME")
+  
+  print(paste("Agrupa dados das pessoas... Coletando e-mails...",base))
+  email <- email |> 
+    junta_email(bases[[base]], paste0("dt_",base), campos["email",base])
+
+  print(paste("Agrupa dados das pessoas... Coletando telefones...",base))
+  telefone <- telefone |> 
+    junta_telefone(bases[[base]], paste0("dt_",base), campos["telefone",base])
+
+  print(paste("Agrupa dados das pessoas... Coletando filiação...",base))
+  mae <- mae |> 
+    junta_mae(bases[[base]], paste0("dt_",base), campos["mae",base])
+  
+  print(paste("Agrupa dados das pessoas... Coletando nascimento...",base))
+  nascimento <- nascimento |> 
+    junta_nascimento(bases[[base]], paste0("dt_",base), campos["nascimento",base])
+  
+  print(paste("Agrupa dados das pessoas... Coletando identidade...",base))
+  identidade <- identidade |> 
+    junta_identidade(bases[[base]], paste0("dt_",base), campos["identidade",base])
+  
+  print(paste("Agrupa dados das pessoas... Coletando ctps...",base))
+  ctps <- ctps |> 
+    junta_ctps(bases[[base]], paste0("dt_",base), campos["ctps",base])
+
+  print(paste("Agrupa dados das pessoas... Coletando endereços...",base))
+  # Formata endereço
+  bases[[base]]$LOGRADOURO <- 
+    bases[[base]][[campos["logradouro",base]]] |>
+    limpa_nome_rua()
+  if (campos["tipo_logradouro",base] |> is.na()) {
+    bases[[base]]$endereco <- ""
+  } else {
+    bases[[base]]$endereco <- 
+      paste0(bases[[base]][[campos["tipo_logradouro",base]]]," ")
+  }
+  bases[[base]]$endereco <- paste0(
+    bases[[base]]$endereco,
+    bases[[base]]$LOGRADOURO,", N ",
+    bases[[base]][[campos["numero",base]]],"#",
+    bases[[base]][[campos["complemento",base]]],", ",
+    bases[[base]][[campos["bairro",base]]],", ",
+    bases[[base]][[campos["cidade",base]]]," - ",
+    bases[[base]][[campos["uf",base]]],", ",
+    "BRASIL")
+  bases[[base]]$endereco[bases[[base]]$LOGRADOURO |> is.na()] <- NA
+  endereco <- endereco |> 
+    junta_endereco(bases[[base]], paste0("dt_",base), "endereco")
+}
+
 # Só é necessario guardar nomes duplicados
 pcodes_duplicados <- nome$pcode[nome$pcode |> duplicated()] |> unique()
 nome <- nome[nome$pcode %in% pcodes_duplicados,]
-
-print("Agrupa dados das pessoas... Coletando e-mails...")
-
-# e-mails
-email <- NULL
-email <- email |> junta_email(pessoas_fisica, "dt_fisica", "Email")
-email <- email |> junta_email(pessoas_educacao, "dt_educacao")
-email <- email |> junta_email(pessoas_saude, "dt_saude")
-email <- email |> junta_email(pessoas_assistencia, "dt_assistencia")
+nome$campo <- "Nome"
 email$campo <- "E-mail"
-
-print("Agrupa dados das pessoas... Coletando telefones...")
-
-# telefones
-telefone <- NULL
-telefone <- telefone |> junta_telefone(pessoas_fisica, "dt_fisica", "Telefone")
-telefone <- telefone |> junta_telefone(pessoas_educacao, "dt_educacao")
-telefone <- telefone |> junta_telefone(pessoas_saude, "dt_saude")
-telefone <- telefone |> junta_telefone(pessoas_assistencia, "dt_assistencia")
 telefone$campo <- "Telefone"
-
-print("Agrupa dados das pessoas... Coletando filiação...")
-
-# maes
-mae <- NULL
-mae <- mae |> junta_mae(pessoas_saude,"dt_saude")
-mae$dt_fisica <- NA
-mae$dt_educacao <- NA
-mae <- mae[,c(1,2,4,5,3)]
-mae <- mae |> junta_mae(pessoas_assistencia,"dt_assistencia")
 mae$campo <- "Mãe"
-
-print("Agrupa dados das pessoas... Coletando data de nascimento...")
-
-# nascimento
-nascimento <- NULL
-nascimento <- nascimento |> junta_nascimento(pessoas_fisica, "dt_fisica")
-nascimento$dt_educacao <- NA
-nascimento <- nascimento |> junta_nascimento(pessoas_saude, "dt_saude")
-nascimento <- nascimento |> junta_nascimento(pessoas_assistencia, "dt_assistencia")
 nascimento$campo <- "Nascimento"
-
-print("Agrupa dados das pessoas... Coletando identidade...")
-
-# identidade
-identidade <- NULL
-identidade <- identidade |> junta_identidade(pessoas_fisica, "dt_fisica")
-identidade <- identidade |> junta_identidade(pessoas_educacao, "dt_educacao")
-identidade <- identidade |> junta_identidade(pessoas_saude, "dt_saude")
-identidade <- identidade |> junta_identidade(pessoas_assistencia, "dt_assistencia")
 identidade$campo <- "Identidade"
-
-print("Agrupa dados das pessoas... Coletando ctps...")
-
-# ctps
-ctps <- pessoas_assistencia[pessoas_assistencia$pcode |> is.na() |> not() &
-                              pessoas_assistencia$ctps |> is.na() |> not(),
-                            c("pcode", "ctps", "dataAtualizacao")]
-ctps <- ctps[ctps$ctps != "",]
-names(ctps) <- c("pcode", "valor", "dt_assistencia")
-ctps$dt_fisica <- NA
-ctps$dt_educacao <- NA
-ctps$dt_saude <- NA
-ctps <- ctps[,c(1,2,4,5,6,3)]
 ctps$campo <- "CTPS"
-
-print("Agrupa dados das pessoas... Coletando endereços...")
-
-# Endereços
-endereco <- NULL
-
-pessoas_fisica$LOGRADOURO <- pessoas_fisica$logradouro |> limpa_nome_rua()
-pessoas_fisica$endereco <- paste0(pessoas_fisica$tipoLogradouro, " ",
-                                  pessoas_fisica$LOGRADOURO,", N ",
-                                  pessoas_fisica$numero,"#",
-                                  pessoas_fisica$complemento,", ",
-                                  pessoas_fisica$bairro,", ",
-                                  pessoas_fisica$cidade," - ",
-                                  pessoas_fisica$UF,", ",
-                                  "BRASIL")
-pessoas_fisica$endereco[pessoas_fisica$LOGRADOURO |> is.na()] <- NA
-endereco <- endereco |> junta_endereco(pessoas_fisica, "dt_fisica")
-
-pessoas_educacao$LOGRADOURO <- pessoas_educacao$logradouro |> limpa_nome_rua()
-pessoas_educacao$endereco <- paste0(pessoas_educacao$LOGRADOURO,", N ",
-                                    pessoas_educacao$numero,"#",
-                                    pessoas_educacao$complemento,", ",
-                                    pessoas_educacao$bairro,", ",
-                                    pessoas_educacao$localidade," - ",
-                                    pessoas_educacao$estado,", ",
-                                    "BRASIL")
-pessoas_educacao$endereco[pessoas_educacao$LOGRADOURO |> is.na()] <- NA
-endereco <- endereco |> junta_endereco(pessoas_educacao, "dt_educacao")
-
-pessoas_saude$LOGRADOURO <- pessoas_saude$Logradouro |> limpa_nome_rua()
-pessoas_saude$endereco <- paste0(pessoas_saude$tipoLogradouro, " ",
-                                  pessoas_saude$LOGRADOURO,", N ",
-                                  pessoas_saude$numero,"#",
-                                  pessoas_saude$complemento,", ",
-                                  pessoas_saude$bairro,", ",
-                                  pessoas_saude$cidade," - ",
-                                  pessoas_saude$UF,", ",
-                                  "BRASIL")
-pessoas_saude$endereco[pessoas_saude$LOGRADOURO |> is.na()] <- NA
-endereco <- endereco |> junta_endereco(pessoas_saude, "dt_saude")
-
-pessoas_assistencia$LOGRADOURO <- pessoas_assistencia$logradouro |> limpa_nome_rua()
-pessoas_assistencia$endereco <- paste0(pessoas_assistencia$LOGRADOURO,", N ",
-                                 pessoas_assistencia$numero,"#",
-                                 pessoas_assistencia$complemento,", ",
-                                 pessoas_assistencia$bairro,", ",
-                                 pessoas_assistencia$cidade," - ",
-                                 pessoas_assistencia$uf,", ",
-                                 "BRASIL")
-pessoas_assistencia$endereco[pessoas_assistencia$LOGRADOURO |> is.na()] <- NA
-endereco <- endereco |> junta_endereco(pessoas_assistencia, "dt_assistencia")
 endereco$campo <- "Endereço"
 
 print("Agrupa dados das pessoas... Gravando...")
@@ -312,45 +223,9 @@ info_pessoais <- rbind(
   endereco
 )
 
+info_pessoais <- info_pessoais[info_pessoais$pcode |> is.na() |> not(),]
+
 saveRDS(info_pessoais,
         file = "manipulacao/dados/info_pessoais.RDS")
 
 print("Agrupa dados das pessoas... fim.")
-
-
-# Endereços!!
-# Precisa unificar entre as pessoas
-# E tentar cruzar com os imoveis_c_geo!
-
-# Cruzar nomes:
-# Identificar pessoas sem CPF em alguma base (Esse tem q ser o foco)
-# Separar pessoas que só estão em 1 base e sem CPF (Talvez)
-# Cruzar pessoas q estão em mais de uma base e não possuem CPF (Talvez).
-
-
-# # Por enquanto é só, pessoal
-# # Vamos desenvolver o consulta com essas informações;
-# # Depois que tiver com a base pronta, vamos ver o que dá para extrair a mais do
-# # restante das informações
-# # Separa os nomes únicos que sobraram nas bases
-# nomes_unicos <- c(
-#   pessoas_assistencia$NOME[!(pessoas_assistencia$acode %in% pessoas$acode)],
-#   pessoas_fisica$NOME[!(pessoas_fisica$fcode %in% pessoas$fcode)],
-#   pessoas_imobiliario$NOME[!(pessoas_imobiliario$icode %in% pessoas$icode)],
-#   pessoas_saude$NOME[!(pessoas_saude$scode %in% pessoas$scode)],
-#   pessoas_educacao$NOME[!(pessoas_educacao$ecode %in% pessoas$ecode)]
-# )
-# 
-# nomes_duplicados <- nomes_unicos[duplicated(nomes_unicos)] |> unique()
-# nomes_unicos <- nomes_unicos[!(nomes_unicos %in% nomes_duplicados)] 
-# nomes_unicos <- nomes_unicos[!(nomes_unicos %in% pessoas$nome)]
-# 
-# teste <- match(pessoas$cpf, pessoas_assistencia$ncpf)
-# min(teste, na.rm = TRUE)
-# #pessoa com débito
-# 
-# p_c_debito <- imoveis |> subset(vlDebitoDA>0)
-# 
-# pessoas_vinculo |> head()
-# p_c_debito <- p_c_debito |> left_join(pessoas_vinculo |> subset(responsavel == TRUE))
-# p_c_debito$codPessoa |> unique()

@@ -7,34 +7,18 @@ library(odbc)
 library(dplyr)
 source("config.R")
 
+campos <- read.csv2("dados/dicionario.csv", row.names = 1) |>
+  as.data.frame()
+
 print("Carga de dados do DataWarehouse... Conectando...")
 con_dw <- dbConnect(odbc(), dsn= dsn_name, encoding = dw_encoding)
 print("Carga de dados do DataWarehouse... Conexão estabelecida... lendo tabelas...")
 
-# imoveis
-imoveis <- 
-  dbReadTable(con_dw, "BI_DadosInscricaoImobiliaria")
+for (base in names(campos)) {
+  assign(base, dbReadTable(con_dw, campos["tabela", base]))
+}
 
-# pessoas
-pessoas_imobiliario <- 
-  dbReadTable(con_dw, "BI_PessoaImobiliario")
-
-pessoas_educacao <- 
-  dbReadTable(con_dw, "BI_PessoaEducacao")
-
-pessoas_assistencia <- 
-  dbReadTable(con_dw, "BI_PessoaAssistenciaSocial")
-
-pessoas_saude <- 
-  dbReadTable(con_dw, "BI_PessoaSaude")
-
-pessoas_fisica <- 
-  dbReadTable(con_dw, "BI_PessoaFisicaCompleto")
-
-pessoas_vinculo <- 
-  dbReadTable(con_dw, "BI_PessoaVinculoInscricaoCadastral")
-
-# completa alguns dados
+# completa dados da tabela imoveis
 # essa parte do código precisa ser integrada diretamente no DW e retirada daqui
 temp_inscricoes <- 
   dbReadTable(con_dw, Id(
@@ -86,13 +70,9 @@ imoveis$complemento <-
     "Complemento"]
 
 # grava dados
-imoveis |> saveRDS("coleta/dados/imoveis.RDS")
-pessoas_imobiliario |> saveRDS("coleta/dados/pessoas_imobiliario.RDS")
-pessoas_educacao |> saveRDS("coleta/dados/pessoas_educacao.RDS")
-pessoas_assistencia |> saveRDS("coleta/dados/pessoas_assistencia.RDS")
-pessoas_saude |> saveRDS("coleta/dados/pessoas_saude.RDS")
-pessoas_fisica |> saveRDS("coleta/dados/pessoas_fisica.RDS")
-pessoas_vinculo |> saveRDS("coleta/dados/pessoas_vinculo.RDS")
+for (base in names(campos)) {
+  get(base) |> saveRDS(paste0("coleta/dados/",campos["tabela", base],".RDS"))
+}
 
 dbDisconnect(con_dw)
 print("Fim da carga de dados do DataWarehouse.")

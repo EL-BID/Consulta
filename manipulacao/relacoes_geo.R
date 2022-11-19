@@ -11,18 +11,25 @@ source("config.R")
 
 ## Carregamento de dados ####
 
-pessoas <- readRDS("manipulacao/dados/pessoas.RDS")
-pessoas_assistencia <- readRDS("manipulacao/dados/pessoas_assistencia.RDS")
-pessoas_educacao <- readRDS("manipulacao/dados/pessoas_educacao.RDS")
-pessoas_saude <- readRDS("manipulacao/dados/pessoas_saude.RDS")
-pessoas_fisica <- readRDS("manipulacao/dados/pessoas_fisica.RDS")
-vinculos <- readRDS("coleta/dados/pessoas_vinculo.RDS")
-imoveis <- readRDS("coleta/dados/imoveis.RDS")
 imoveis_geo_osm <- readRDS("coleta/dados/imoveis_geo_osm.RDS")
 imoveis_geo_interno <- readRDS("coleta/dados/imoveis_geo_interno.RDS")
 unidades <- readRDS("coleta/dados/unidades.RDS")
 unidades_saude <- readRDS("coleta/dados/unidades_saude.RDS")
 limite_cidade <- readRDS("coleta/dados/limite_cidade.RDS")
+
+campos <- read.csv2("dados/dicionario.csv", row.names = 1) |>
+  as.data.frame()
+
+for (base in colnames(campos)) {
+  if (campos["cpf",base]=="")
+    assign(base, readRDS(paste0("coleta/dados/",campos["tabela",base],".RDS")))
+  else
+    assign(paste0("pessoas_",base),
+           readRDS(paste0("manipulacao/dados/",campos["tabela",base],".RDS")))
+}
+
+pessoas <- readRDS("manipulacao/dados/pessoas.RDS")
+
 
 ## Preparação ####
 
