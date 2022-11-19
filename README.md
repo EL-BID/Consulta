@@ -70,6 +70,8 @@ Os dados fornecidos pela prefeitura devem ser adequados aos requisitos da aplica
 
 O arquivo modelo_dw.xlsx contém uma pasta do excel onde cada planilha apresenta uma tabela do Datawarehouse da prefeitura. É preciso configurar um acesso ODBC via DSN. O DSN para conexão via ODBC pode ser personalizado no arquivo "config.R". Caso se deseje modificar a forma de acesso a esse conjunto de dados, basta alterar o código do arquivo "coleta/dw_via_odbc.R".
 
+Novas bases de dados podem ser facilmente incluídas via DW, bastando informar no dicionário de dados (arquivo "dados/dicionario.csv") a estrutura da nova base, para a realização dos cruzamentos das informações.
+
 Além dos dados do datawarehouse, é preciso fornecer informações as localizações georreferenciadas dos imóveis do município e das unidades de atendimento da prefeitura (saúde, educação e assistência social), além das malhas dos lotes da cidade. Exemplos de arquivos com essas informações também estão presentes na pasta "dados" (lotes.kml, imoveis.kml, unidades.kml e unidades_saude.kml - esses nomes podem ser personalizados no arquivo "config.R"). Todos os imóveis que não tiverem localização georreferenciada serão localizados a partir dos dados fornecidos pela consulta dos endereços constantes no DW ao serviço do OpenStreetMap. É importante ter em mente que, como há o limite de uma solicitação por segundo, o tempo de demora para a utilização desse serviço é elevado.
 
 ### Executar o script de carga
