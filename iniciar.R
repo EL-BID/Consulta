@@ -13,6 +13,7 @@ source("config.R", encoding = "UTF-8")
 source("utils/pacotes.R")
 
 ## Autenticação para a visualização ####
+dir.create("visualizacao/dados", showWarnings = FALSE)
 source("utils/cria_chave_db.R")
 source("utils/inicia_db.R")
 

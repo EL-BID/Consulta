@@ -71,7 +71,7 @@ imoveis$complemento <-
 
 # grava dados
 for (base in names(campos)) {
-  get(base) |> saveRDS(paste0("coleta/dados/",campos["tabela", base],".RDS"))
+  get(base) |> saveRDS(paste0("coleta/dados/",base,".RDS"))
 }
 
 dbDisconnect(con_dw)

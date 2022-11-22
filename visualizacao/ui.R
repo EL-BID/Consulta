@@ -222,7 +222,7 @@ navbarPage(
         actionLink(
           "btn_tabela_infos",
           label = NULL,
-          icon("id-card-o")
+          icon("id-card")
         )
       )),
     

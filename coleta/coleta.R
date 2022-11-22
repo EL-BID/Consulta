@@ -13,6 +13,6 @@ rm(list=ls())
 gc()
 
 # openstreetmap (georreferenciamento restante)
-source("coleta/openstreetmap.R")
+source("coleta/openstreetmap.R", encoding = "UTF-8")
 rm(list=ls())
 gc()

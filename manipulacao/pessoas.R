@@ -20,7 +20,7 @@ bases <- NULL
 for (base in colnames(campos)) {
   print(paste("Agrupa dados das pessoas... Carregando informações...", base))
   bases[[base]] <- 
-    readRDS(paste0("coleta/dados/",campos["tabela",base],".RDS"))
+    readRDS(paste0("coleta/dados/",base,".RDS"))
 }
 
 print("Agrupa dados das pessoas... Criando arquivo de pessoas...")
@@ -118,7 +118,7 @@ print("Agrupa dados das pessoas... Salvando informações de pessoas...")
 
 pessoas |> saveRDS("manipulacao/dados/pessoas.RDS")
 for (base in names(campos)) {
-  bases[[base]] |> saveRDS(paste0("manipulacao/dados/",campos["tabela",base],".RDS"))
+  bases[[base]] |> saveRDS(paste0("manipulacao/dados/",base,".RDS"))
 }
 
 # Separa as informações pessoais
@@ -142,8 +142,10 @@ for (base in names(campos)) {
   }
   
   # Padroniza o formato das datas
-  bases[[base]][[campos["atualizacao",base]]] |>
-    as.Date("%d/%m/%Y") |> format("%d/%m/%Y")  
+  bases[[base]][[campos["atualizacao",base]]] <- 
+    bases[[base]][[campos["atualizacao",base]]] |>
+    as.Date("%d/%m/%Y") |> 
+    format("%d/%m/%Y")  
 
   print(paste("Agrupa dados das pessoas... Coletando nomes...",base))
   nome <- nome |> 

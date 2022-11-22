@@ -22,10 +22,10 @@ campos <- read.csv2("dados/dicionario.csv", row.names = 1) |>
 
 for (base in colnames(campos)) {
   if (campos["cpf",base]=="")
-    assign(base, readRDS(paste0("coleta/dados/",campos["tabela",base],".RDS")))
+    assign(base, readRDS(paste0("coleta/dados/",base,".RDS")))
   else
     assign(paste0("pessoas_",base),
-           readRDS(paste0("manipulacao/dados/",campos["tabela",base],".RDS")))
+           readRDS(paste0("manipulacao/dados/",base,".RDS")))
 }
 
 pessoas <- readRDS("manipulacao/dados/pessoas.RDS")

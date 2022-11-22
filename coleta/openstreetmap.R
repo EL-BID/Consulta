@@ -8,7 +8,7 @@ library(raster)
 library(sf)
 library(rgdal)
 library(tidygeocoder)
-source("config.R")
+source("config.R", encoding = "UTF-8")
 
 # Limite da cidade
 print("Carga de dados do OpenStreetMap... limite da cidade...")
@@ -17,7 +17,9 @@ limite_cidade <- opq(paste("Vitória","-",UF)) |>
   osmdata_sf()
 
 limite_cidade <- limite_cidade$osm_multipolygons |> as("Spatial")
-limite_cidade <- limite_cidade[limite_cidade$name|>toupper()==CIDADE,]
+limite_cidade <- limite_cidade[limite_cidade$name |> 
+                                 iconv(from = "UTF-8", to = "UTF-8") |> 
+                                 toupper() == CIDADE,]
 limite_cidade <- spTransform(limite_cidade,  CRS("+ellps=WGS84 +proj=longlat +datum=WGS84 +no_defs"))
 
 saveRDS(limite_cidade,

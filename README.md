@@ -84,11 +84,11 @@ A implantação da aplicação em um servidor pode ser feita de três formas dis
 
 - Via shiny-server:
 
-Após a correta configuração do shiny-server, um link deve ser feito dentro de /srv/shiny-server apontando para a pasta "visualizacao" da aplicação. O nome do link será utilizado para acessar a aplicação pelo navegador (http://exemplo.com/nome_do_link/). 
+Após a correta configuração do shiny-server (observe as dependências abaixo), um link deve ser feito dentro de /srv/shiny-server apontando para a pasta "visualizacao" da aplicação. O nome do link será utilizado para acessar a aplicação pelo navegador (http://exemplo.com/nome_do_link/). 
 
 Além disso, é preciso instalar todos os pacotes requeridos - executando o seguinte comando no servidor:
 
-`sudo su - c "R -e \"source('<CAMINHO DA APLICAÇÃO>/pacotes.R')\""`
+`sudo su -c "R -e \"source('<CAMINHO DA APLICAÇÃO>/utils/pacotes.R')\""`
 
 - Via RStudio connect:
 Não documentado.
@@ -112,7 +112,22 @@ For /F "Skip=1 Tokens=2*" %%A In (
 
 ### Dependências
 
-A aplicação foi desenvolvida para acessar um Datawarehouse hospedado em um MS SQL Server. No entanto, deve funcionar adequadamente em qualquer base de dados que permita acesso via ODBC.
+libsodium-dev
+libssl-dev
+unixodbc-dev
+libcurl4-openssl-dev
+libxml2-dev
+libudunits2-dev
+libproj-dev
+libgdal-dev
+default-jdk
+default-jre
+
+Talvez seja necessário definir o caminho para a biblioteca java:
+```
+R CMD javareconf -e
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_LD_LIBRARY_PATH
+```
 
 ## Autor
 ---

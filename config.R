@@ -3,6 +3,7 @@
 # DSN para acesso à base da prefeitura via ODBC
 dsn_name <- "PMVBigData"
 dw_encoding <- "UTF-8"
+#dw_encoding <- "LATIN1"
 
 # Arquivos presentes em /dados:
 arquivo_lotes <- "lotes.kml"
@@ -18,3 +19,7 @@ senha_inicial <- "admin"
 # Cidade
 CIDADE <- "VITÓRIA"
 UF <- "ES"
+
+# Proxy
+# proxy_url <- "proxy_server_here"
+# Sys.setenv(http_proxy = proxy_url, https_proxy = proxy_url, ftp_proxy = proxy_url)
