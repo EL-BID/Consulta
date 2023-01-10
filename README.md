@@ -1,6 +1,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EL-BID_Consulta&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=EL-BID_Consulta)
 
 <h1 align="center">Consulta</h1>
+
 <p align="center"><img src="visualizacao/www/screenshot.jpg" alt="Consulta" style="border: 1px solid #000000;"></p> 
 
 
