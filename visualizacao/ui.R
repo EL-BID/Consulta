@@ -31,6 +31,32 @@ navbarPage(
       )
     )
   ),
+  
+  footer = tagList(
+    absolutePanel(
+      fixed = TRUE,
+      style = "background-color: rgba(255,255,255,0.6);
+            z-index: 100;
+            pointer-events: none;
+            color: black;
+            font-size:20px;
+            font-weight:bold;
+            padding: 0px",
+      bottom = 0,
+      left = 0,
+      width = 370,
+      height = footer_height,
+      div(style = "color:red; padding-left:10px;",
+          if (status$teste) {
+            "* Versão de teste. Dados fictícios."
+          }
+      ),
+      div(style = "padding-left:10px;",
+          " Última atualização: ",
+          status$atualizacao
+      ),
+    )
+  ),
     
   tabPanel(
     "Munícipe",
@@ -236,15 +262,14 @@ navbarPage(
         top = 125,
         left = 10,
         draggable = TRUE,
-        style = "
-          z-index: 4000;
-          background-color: #fff;
-          border-bottom-left-radius: 4px;
-          border-bottom-right-radius: 4px;
-          border-top-left-radius: 4px;
-          border-top-right-radius: 4px;
-          border: 2px solid rgba(0,0,0,0.2);
-        ",
+        style = paste0("z-index: 4000;",
+                       "cursor: pointer;",
+                       "background-color: #fff;",
+                       "border-bottom-left-radius: 4px;",
+                       "border-bottom-right-radius: 4px;",
+                       "border-top-left-radius: 4px;",
+                       "border-top-right-radius: 4px;",
+                       "border: 2px solid rgba(0,0,0,0.2);"),
         DTOutput("tabela_relacoes"),
         actionLink(
           "fechar_tabela_relacoes",
@@ -334,19 +359,17 @@ navbarPage(
       "output.mostrar_lista_relacionados != -1",
       absolutePanel(
         width = 650,
-        # height = 200,
         top = 125,
         left = 10,
         draggable = TRUE,
-        style = "
-          z-index: 4000;
-          background-color: #fff;
-          border-bottom-left-radius: 4px;
-          border-bottom-right-radius: 4px;
-          border-top-left-radius: 4px;
-          border-top-right-radius: 4px;
-          border: 2px solid rgba(0,0,0,0.2);
-        ",
+        style = paste0("z-index: 4000;",
+                       "cursor: pointer;",
+                       "background-color: #fff;",
+                       "border-bottom-left-radius: 4px;",
+                       "border-bottom-right-radius: 4px;",
+                       "border-top-left-radius: 4px;",
+                       "border-top-right-radius: 4px;",
+                       "border: 2px solid rgba(0,0,0,0.2);"),
         DTOutput("lista_relacionados"),
         actionLink(
           "fechar_lista_relacionados",
@@ -388,5 +411,5 @@ navbarPage(
     downloadButton("download"),
     
   )  
-  ) |> secure_app(enable_admin = TRUE, language = "pt-BR", theme = "simplex", tags_top = "Consulta")
+  ) |> secure_app(enable_admin = TRUE, language = "pt-BR", theme = "simplex", tags_top = info_login)
 # )

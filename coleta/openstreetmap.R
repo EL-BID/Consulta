@@ -22,13 +22,13 @@ limite_cidade <- limite_cidade[limite_cidade$name |>
                                  toupper() == CIDADE,]
 limite_cidade <- spTransform(limite_cidade,  CRS("+ellps=WGS84 +proj=longlat +datum=WGS84 +no_defs"))
 
-saveRDS(limite_cidade,
-        "coleta/dados/limite_cidade.RDS")
+saveRDK(limite_cidade,
+        "coleta/dados/limite_cidade.RDK")
 
 ## consulta as coordenadas dos imóveis para os quais não há informações internas
 print("Carga de dados do OpenStreetMap... geocode dos imóveis...")
-imoveis_geo_osm <- readRDS("coleta/dados/imoveis.RDS")
-imoveis_geo_interno <- readRDS("coleta/dados/imoveis_geo_interno.RDS")
+imoveis_geo_osm <- readRDK("coleta/dados/imoveis.RDK")
+imoveis_geo_interno <- readRDK("coleta/dados/imoveis_geo_interno.RDK")
 
 imoveis_geo_osm <- 
   imoveis_geo_osm[
@@ -60,6 +60,6 @@ coordinates(imoveis_geo_osm) <- c("long","lat")
 proj4string(imoveis_geo_osm) <- "+proj=longlat +datum=WGS84 +no_defs"
 
 # Grava
-imoveis_geo_osm |> saveRDS("coleta/dados/imoveis_geo_osm.RDS")
+imoveis_geo_osm |> saveRDK("coleta/dados/imoveis_geo_osm.RDK")
 
 print("Fim da carga de dados do OpenStreetMap.")

@@ -24,6 +24,7 @@ packages <- c(
   "rgeos",
   "DT",
   "shinymanager",
+  "openssl",
   "keyring"
 )
 

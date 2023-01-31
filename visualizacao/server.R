@@ -451,6 +451,7 @@ function(input, output, session)  {
   
   # Tabela que elenca outros munícipes relacionados
   output$tabela_outros_relacionados <- renderDT({
+    if (dados_imovel() |> length() == 0) return("Erro...")
     if (dados_imovel() == "") return("Aguarde..." |> as.data.frame())
     
     # Seleciona todos os dados

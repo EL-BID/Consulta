@@ -11,3 +11,6 @@
 #          keyring = NULL)
 
 chave |> saveRDS("visualizacao/dados/chave.RDS")
+
+chave |> charToRaw() |> sha256() |> saveRDS("dados/chave_db.RDS")
+chave |> charToRaw() |> sha256() |> saveRDS("visualizacao/dados/chave_db.RDS")

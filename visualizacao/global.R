@@ -12,23 +12,41 @@ library(xlsx)
 library(cachem)
 library(sp)
 library(splitstackshape)
+library(openssl)
 
+# Funções para leitura e escrita de dados criptografados
+readRDK <- function (file_name) {
+  chave <- readRDS("dados/chave_db.RDS")
+  file_name |>
+    readRDS() |>
+    aes_cbc_decrypt(key = chave) |>
+    unserialize()
+}
+
+saveRDK <- function (dados, file_name) {
+  chave <- readRDS("dados/chave_db.RDS")
+  dados |> 
+    serialize(NULL) |> 
+    aes_cbc_encrypt(key = chave) |>
+    saveRDS(file_name)
+}
 
 # Carrega dados
-pessoas <- readRDS("dados/pessoas.RDS")
-info_pessoais <- readRDS("dados/info_pessoais.RDS")
-imoveis_c_geo <- readRDS("dados/imoveis_c_geo.RDS")
-educacao_c_geo <- readRDS("dados/educacao_c_geo.RDS")
-saude_c_geo <- readRDS("dados/saude_c_geo.RDS")
-assistencia_c_geo <- readRDS("dados/assistencia_c_geo.RDS")
-imoveis_s_geo <- readRDS("dados/imoveis_s_geo.RDS")
-educacao_s_geo <- readRDS("dados/educacao_s_geo.RDS")
-saude_s_geo <- readRDS("dados/saude_s_geo.RDS")
-assistencia_s_geo <- readRDS("dados/assistencia_s_geo.RDS")
-lotes <- readRDS("dados/lotes.RDS")
-lotes_sem_dados <- readRDS("dados/lotes_sem_dados.RDS")
-imoveis_p_lote <- readRDS("dados/imoveis_p_lote.RDS")
-lista_enderecos <- readRDS("dados/lista_enderecos.RDS")
+pessoas <- readRDK("dados/pessoas.RDK")
+info_pessoais <- readRDK("dados/info_pessoais.RDK")
+imoveis_c_geo <- readRDK("dados/imoveis_c_geo.RDK")
+educacao_c_geo <- readRDK("dados/educacao_c_geo.RDK")
+saude_c_geo <- readRDK("dados/saude_c_geo.RDK")
+assistencia_c_geo <- readRDK("dados/assistencia_c_geo.RDK")
+imoveis_s_geo <- readRDK("dados/imoveis_s_geo.RDK")
+educacao_s_geo <- readRDK("dados/educacao_s_geo.RDK")
+saude_s_geo <- readRDK("dados/saude_s_geo.RDK")
+assistencia_s_geo <- readRDK("dados/assistencia_s_geo.RDK")
+lotes <- readRDK("dados/lotes.RDK")
+lotes_sem_dados <- readRDK("dados/lotes_sem_dados.RDK")
+imoveis_p_lote <- readRDK("dados/imoveis_p_lote.RDK")
+lista_enderecos <- readRDK("dados/lista_enderecos.RDK")
+status <- readRDS("dados/status.RDS")
 mybbox <- imoveis_c_geo@bbox
 
 chave <- readRDS("dados/chave.RDS")
@@ -36,6 +54,43 @@ chave <- readRDS("dados/chave.RDS")
 shinyOptions(cache = cache_disk("dados/cache/"))
 
 # definições de estilos:
+# informações de teste
+if (status$teste) {
+  footer_height <- 55
+  info_login <- 
+    withTags(
+      table(
+        witdh = "100%",
+        style = "margin: auto;",
+        tr(
+          td(
+            width = "100%",
+            style = "font-size: 24px; font-weight: bold;",
+            "Consulta Munícipe"
+          )
+        ),
+        tr(
+          td(
+            style = "font-size: 16px; font-weight: bold; color: red;",
+            "(Versão de teste. Dados fictícios.)"
+          )
+        ),
+        tr(
+          td(
+            strong("Usuário:"),
+            "admin",
+            strong("Senha:"),
+            "admin"
+          )
+        )
+      )
+    )
+  
+} else {
+  footer_height <- 25
+  info_login <- "Consulta Munícipe"
+}
+
 # botão de ferramenta
 btn_pressionado <- 
   "z-index:4000;

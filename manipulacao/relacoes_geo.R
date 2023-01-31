@@ -11,24 +11,24 @@ source("config.R")
 
 ## Carregamento de dados ####
 
-imoveis_geo_osm <- readRDS("coleta/dados/imoveis_geo_osm.RDS")
-imoveis_geo_interno <- readRDS("coleta/dados/imoveis_geo_interno.RDS")
-unidades <- readRDS("coleta/dados/unidades.RDS")
-unidades_saude <- readRDS("coleta/dados/unidades_saude.RDS")
-limite_cidade <- readRDS("coleta/dados/limite_cidade.RDS")
+imoveis_geo_osm <- readRDK("coleta/dados/imoveis_geo_osm.RDK")
+imoveis_geo_interno <- readRDK("coleta/dados/imoveis_geo_interno.RDK")
+unidades <- readRDK("coleta/dados/unidades.RDK")
+unidades_saude <- readRDK("coleta/dados/unidades_saude.RDK")
+limite_cidade <- readRDK("coleta/dados/limite_cidade.RDK")
 
 campos <- read.csv2("dados/dicionario.csv", row.names = 1) |>
   as.data.frame()
 
 for (base in colnames(campos)) {
   if (campos["cpf",base]=="")
-    assign(base, readRDS(paste0("coleta/dados/",base,".RDS")))
+    assign(base, readRDK(paste0("coleta/dados/",base,".RDK")))
   else
     assign(paste0("pessoas_",base),
-           readRDS(paste0("manipulacao/dados/",base,".RDS")))
+           readRDK(paste0("manipulacao/dados/",base,".RDK")))
 }
 
-pessoas <- readRDS("manipulacao/dados/pessoas.RDS")
+pessoas <- readRDK("manipulacao/dados/pessoas.RDK")
 
 
 ## Preparação ####
@@ -81,38 +81,36 @@ endereco <- NULL
 
 pessoas_fisica$LOGRADOURO <- pessoas_fisica$logradouro |> limpa_nome_rua()
 pessoas_fisica$endereco <- paste0(pessoas_fisica$tipoLogradouro, " ",
-                                  pessoas_fisica$LOGRADOURO,"#",
-                                  pessoas_fisica$numero,"|",
+                                  pessoas_fisica$LOGRADOURO,"§",
+                                  pessoas_fisica$numero,"¢",
                                   pessoas_fisica$complemento)
 pessoas_fisica$endereco[pessoas_fisica$LOGRADOURO |> is.na()] <- NA
 endereco <- endereco |> junta_endereco(pessoas_fisica, "dt_fisica")
 
 pessoas_educacao$LOGRADOURO <- pessoas_educacao$logradouro |> limpa_nome_rua()
-pessoas_educacao$endereco <- paste0(pessoas_educacao$LOGRADOURO,"#",
-                                    pessoas_educacao$numero,"|",
+pessoas_educacao$endereco <- paste0(pessoas_educacao$LOGRADOURO,"§",
+                                    pessoas_educacao$numero,"¢",
                                     pessoas_educacao$complemento)
 pessoas_educacao$endereco[pessoas_educacao$LOGRADOURO |> is.na()] <- NA
 endereco <- endereco |> junta_endereco(pessoas_educacao, "dt_educacao")
 
 pessoas_saude$LOGRADOURO <- pessoas_saude$Logradouro |> limpa_nome_rua()
 pessoas_saude$endereco <- paste0(pessoas_saude$tipoLogradouro, " ",
-                                 pessoas_saude$LOGRADOURO,"#",
-                                 pessoas_saude$numero,"|",
+                                 pessoas_saude$LOGRADOURO,"§",
+                                 pessoas_saude$numero,"¢",
                                  pessoas_saude$complemento)
 pessoas_saude$endereco[pessoas_saude$LOGRADOURO |> is.na()] <- NA
 endereco <- endereco |> junta_endereco(pessoas_saude, "dt_saude")
 
 pessoas_assistencia$LOGRADOURO <- pessoas_assistencia$logradouro |> limpa_nome_rua()
-pessoas_assistencia$endereco <- paste0(pessoas_assistencia$LOGRADOURO,"#",
-                                       pessoas_assistencia$numero,"|",
+pessoas_assistencia$endereco <- paste0(pessoas_assistencia$LOGRADOURO,"§",
+                                       pessoas_assistencia$numero,"¢",
                                        pessoas_assistencia$complemento)
 pessoas_assistencia$endereco[pessoas_assistencia$LOGRADOURO |> is.na()] <- NA
 endereco <- endereco |> junta_endereco(pessoas_assistencia, "dt_assistencia")
 
-endereco <- endereco[,c(1,2)] |> cSplit("valor","#")
-endereco <- endereco[endereco$valor_3 |> is.na(),]
-endereco <- endereco[,c(1:3)] |> cSplit("valor_2","|")
-endereco <- endereco[endereco$valor_2_3 |> is.na(),c(1:4)]
+endereco <- endereco[,c(1,2)] |> cSplit("valor","§")
+endereco <- endereco[,c(1:3)] |> cSplit("valor_2","¢")
 names(endereco) <- c("pcode","rua","num","complemento")
 endereco$ruanum <- paste(endereco$rua, endereco$num)
 endereco$ruanumcomplemento <- paste(endereco$rua, endereco$num, endereco$complemento)
@@ -252,24 +250,24 @@ lista_enderecos$indice <- 1:length(lista_enderecos$endereco)
 lista_enderecos <- lista_enderecos[order(lista_enderecos$endereco),]
 
 # Grava
-saveRDS(assistencia_c_geo, 
-        file = "manipulacao/dados/assistencia_c_geo.RDS")
-saveRDS(assistencia_s_geo, 
-        file = "manipulacao/dados/assistencia_s_geo.RDS")
+saveRDK(assistencia_c_geo, 
+        file = "manipulacao/dados/assistencia_c_geo.RDK")
+saveRDK(assistencia_s_geo, 
+        file = "manipulacao/dados/assistencia_s_geo.RDK")
 
-saveRDS(educacao_c_geo, 
-        file = "manipulacao/dados/educacao_c_geo.RDS")
-saveRDS(educacao_s_geo, 
-        file = "manipulacao/dados/educacao_s_geo.RDS")
+saveRDK(educacao_c_geo, 
+        file = "manipulacao/dados/educacao_c_geo.RDK")
+saveRDK(educacao_s_geo, 
+        file = "manipulacao/dados/educacao_s_geo.RDK")
 
-saveRDS(saude_c_geo, 
-        file = "manipulacao/dados/saude_c_geo.RDS")
-saveRDS(saude_s_geo, 
-        file = "manipulacao/dados/saude_s_geo.RDS")
+saveRDK(saude_c_geo, 
+        file = "manipulacao/dados/saude_c_geo.RDK")
+saveRDK(saude_s_geo, 
+        file = "manipulacao/dados/saude_s_geo.RDK")
 
-saveRDS(imoveis_c_geo, 
-        file = "manipulacao/dados/imoveis_c_geo.RDS")
-saveRDS(imoveis_s_geo, 
-        file = "manipulacao/dados/imoveis_s_geo.RDS")
+saveRDK(imoveis_c_geo, 
+        file = "manipulacao/dados/imoveis_c_geo.RDK")
+saveRDK(imoveis_s_geo, 
+        file = "manipulacao/dados/imoveis_s_geo.RDK")
 
-lista_enderecos |> saveRDS("manipulacao/dados/lista_enderecos.RDS")
+lista_enderecos |> saveRDK("manipulacao/dados/lista_enderecos.RDK")

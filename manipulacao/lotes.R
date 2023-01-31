@@ -7,9 +7,9 @@ library(tidyr)
 
 source("config.R")
 
-lotes <- readRDS("coleta/dados/lotes.RDS")
-imoveis_c_geo <- readRDS("manipulacao/dados/imoveis_c_geo.RDS")
-pessoas <- readRDS("manipulacao/dados/pessoas.RDS")
+lotes <- readRDK("coleta/dados/lotes.RDK")
+imoveis_c_geo <- readRDK("manipulacao/dados/imoveis_c_geo.RDK")
+pessoas <- readRDK("manipulacao/dados/pessoas.RDK")
 
 # numerar lotes
 lotes@data$Name <- 1:length(lotes@data$Name)
@@ -40,6 +40,6 @@ lista_lotes <- imoveis_p_lote$Name |> unique()
 lotes_sem_dados <- lotes[-lista_lotes,]
 lotes <- lotes[lista_lotes,]
 
-lotes |> saveRDS("manipulacao/dados/lotes.RDS")
-lotes_sem_dados |> saveRDS("manipulacao/dados/lotes_sem_dados.RDS")
-imoveis_p_lote |> saveRDS("manipulacao/dados/imoveis_p_lote.RDS")
+lotes |> saveRDK("manipulacao/dados/lotes.RDK")
+lotes_sem_dados |> saveRDK("manipulacao/dados/lotes_sem_dados.RDK")
+imoveis_p_lote |> saveRDK("manipulacao/dados/imoveis_p_lote.RDK")

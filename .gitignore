@@ -3,6 +3,7 @@
 .RData
 .RDataTmp
 .Ruserdata
+*.RDS
 coleta/dados/
 visualizacao/dados/
 manipulacao/dados/

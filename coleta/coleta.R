@@ -3,7 +3,11 @@
 dir.create("coleta/dados", showWarnings = FALSE)
 
 # dados do Data Warehouse via ODBC
-source("coleta/dw_via_odbc.R")
+if (teste_ver) {
+  source("coleta/dw_via_xlsx.R")
+} else {
+  source("coleta/dw_via_odbc.R")
+}
 rm(list=ls())
 gc()
 
