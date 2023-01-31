@@ -3,6 +3,14 @@
 dir.create("manipulacao/dados", showWarnings = FALSE)
 dir.create("visualizacao/dados", showWarnings = FALSE)
 
+source("config.R", encoding = "UTF-8")
+
+# Informações de atualização
+status <- NULL
+status$atualizacao <- Sys.Date()
+status$teste <- teste_ver
+status |> saveRDS("manipulacao/dados/status.RDS")
+
 # Cruza as pessoas
 source("manipulacao/pessoas.R")
 rm(list=ls())
