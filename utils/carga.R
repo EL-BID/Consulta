@@ -20,11 +20,6 @@ source("coleta/coleta.R")
 source("manipulacao/manipulacao.R")
 
 # Visualização: grava dados e reinicia a aplicação
-source("config.R", encoding = "UTF-8")
-status <- NULL
-status$atualizacao <- Sys.Date()
-status$teste <- teste_ver
-status |> saveRDS("visualizacao/dados/status.RDS")
 file.copy("manipulacao/dados", "visualizacao", recursive = TRUE)
 file.create("visualizacao/restart.txt")
 print("Aplicação atualizada...")
